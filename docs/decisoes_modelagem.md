@@ -1,35 +1,54 @@
 # Decisões de Modelagem
 
-## Padrão de queries no Power Query
-- Uma query de staging por tabela (`stg_Tabela4`, `stg_Tabela6`, etc.), desabilitada de carregar no modelo.
-- Queries finais (`Fato_Saldo_UF_Setor`, `Fato_Serie_Mensal`, `Fato_Rotatividade_Setor`, `Fato_Rotatividade_UF`, `Fato_Salario_Nacional`) carregam pro modelo.
-- Agrupar em pastas de exibição (Query Groups): `Staging` e `Fatos`.
+## Hierarquia de setor (Tabela 6)
+A fonte mistura 3 níveis de detalhe na mesma coluna Setor, identificados pela indentação original das células no Excel:
 
-## Tabela 6 — unpivot
-Estrutura wide (mês x métrica em colunas). Tratamento sugerido:
-1. Remover linhas de rodapé (fonte, notas).
-2. Promover cabeçalhos combinando linha 5 (mês) + linha 6 (métrica) antes de carregar (ou via `Table.TransformColumnNames` com offset).
-3. Unpivot das colunas de métrica, mantendo Setor como chave.
-4. Separar coluna "Atributo" combinada em duas: Mês e Métrica.
-5. Excluir blocos "Acumulado do Ano" e "Últimos 12 Meses" (não são mês real).
-6. Converter "Mês" de texto (`Janeiro/2020`) pra tipo Date — precisa de tabela de tradução PT-BR de mês, ou `Date.MonthName` reverso.
+```
+Total (Nivel 0)
+Agricultura, Construção, Comércio, Não Identificado (Nivel 1, folhas)
+Indústria Geral (Nivel 1, agregador)
+    Indústrias Extrativas, de Transformação, Eletricidade e Gás, Água/Esgoto (Nivel 2, folhas)
+Serviços (Nivel 1, agregador)
+    Transporte, Alojamento, Serviços Domésticos (Nivel 2, folhas)
+    Informação/Comunicação e Atividades Financeiras... (Nivel 2, agregador)
+        5 subsetores (Nivel 3, folhas)
+    Administração Pública/Educação/Saúde... (Nivel 2, agregador)
+        3 subsetores (Nivel 3, folhas)
+    Outros Serviços (Nivel 2, agregador)
+        3 subsetores (Nivel 3, folhas)
+```
 
-## Tabela 4 — unpivot
-Estrutura wide (UF em colunas). Unpivot direto, sem tratamento de data.
+Somar todas as linhas sem distinguir agregador de folha conta cada valor 2 ou 3 vezes (pai mais filho). As colunas `EhTotal` e `EhAgregador`, criadas em `stg_Tabela6` e propagadas para `Dim_Setor` e `Fato_Serie_Mensal`, resolvem isso: toda medida aditiva (Saldo, Estoque, Admissões, Desligamentos) filtra `EhTotal = FALSE, EhAgregador = FALSE` para somar só folhas, e usa `EhTotal = TRUE` quando o objetivo é o valor nacional pronto direto da fonte.
 
-## Dimensão Setor
-Considerar criar uma dimensão separada (`Dim_Setor`) com hierarquia:
-Grupamento macro (Indústria, Serviços etc.) > Subsetor.
-Hoje a tabela já vem com essa hierarquia implícita na indentação dos nomes — decidir se replica via coluna calculada ou mantém achatado.
+## Padrão de nomenclatura das medidas
+- Sem sufixo (`Saldo`, `Estoque`...): soma as folhas, respeita qualquer filtro de setor do contexto (usada em visuais quebrados por setor).
+- Sufixo "Nacional" (`Saldo Nacional`, `Estoque Nacional`...): trava em `EhTotal = TRUE`, ignora seleção de setor, usada nos cartões da Visão Geral.
+- Sufixo "Contexto": string de texto pronta com comparação MoM/YoY, construída com `VAR` dentro da própria medida, sem medidas intermediárias separadas para "mês anterior", "variação" etc, reduzindo a quantidade de medidas no modelo.
 
-## Relacionamentos
-- `Dim_Setor[Setor]` 1:N com todas as fatos por setor.
-- `Dim_Data[Data]` 1:N com `Fato_Serie_Mensal` e `Fato_Salario_Nacional`.
-- `Dim_UF` 1:N com `Fato_Saldo_UF_Setor` e `Fato_Rotatividade_UF`.
-- Tabelas de foto única (Rotatividade) não têm relação com Dim_Data (são um único período, ago/25-jul/26).
+## Comparação de 2 setores lado a lado
+O modelo mantém 2 dimensões desconectadas (`Dim_Setor_A`, `Dim_Setor_B`), cada uma alimentando um slicer independente, disponíveis pra uma visão de comparação. O cruzamento com a fato é feito via `TREATAS`, não por relacionamento físico:
+```dax
+Saldo Setor A =
+CALCULATE(
+    SUM(Fato_Saldo_UF_Setor[Saldo]),
+    TREATAS(VALUES(Dim_Setor_A[Setor]), Fato_Saldo_UF_Setor[Setor])
+)
+```
+Exclusão mútua entre os 2 slicers (o setor escolhido em A some da lista de B e vice-versa) é feita comparando `SELECTEDVALUE` das duas tabelas desconectadas, funcionando mesmo sem relacionamento entre elas porque a avaliação roda no nível do filtro do visual do slicer, não no dado.
 
-## Medidas DAX candidatas
-- Saldo acumulado 12 meses
-- Variação % ano contra ano
-- Rotatividade média ponderada por setor selecionado
-- Salário real (admissão vs desligamento), gap %
+A página final "Saldo por Estado" usa a versão mais simples desse modelo: 1 slicer único de `Dim_Setor[Setor]` filtrando um ranking de barras horizontal por `Dim_UF`, com medida de resumo textual (`Resumo Estados`) identificando o estado líder, sua participação percentual no saldo nacional do setor selecionado, e a contagem de estados com saldo negativo.
+
+## Rotatividade: taxa pronta vs taxa recalculada
+`TaxaRotatividade` na fonte é uma métrica por linha, não é aditiva (não pode somar ou tirar média direto entre setores diferentes). Duas medidas cobrem os 2 cenários:
+- `Taxa Rotatividade (linha única)`: usa `SELECTEDVALUE`, correta só quando o contexto já restringe a 1 setor.
+- `Taxa Rotatividade Recalculada`: reconstrói a taxa a partir de (Admissões + Desligamentos) / 2 dividido pelo Estoque Médio somados, correta mesmo com múltiplos setores no contexto (ex: cartão com seleção múltipla).
+
+Mesmo padrão replicado para UF em `Taxa Rotatividade UF Recalculada`, com filtro adicional `Nivel = "UF"` pra não misturar com as linhas de "Brasil"/"Região" que `Fato_Rotatividade_UF` também contém.
+
+## Small Multiples com cor por categoria
+O visual nativo de Small Multiples não permite cor condicional por painel quando a mesma coluna está no campo "Múltiplos Pequenos" e não está também na "Legenda", o motor de consulta não expõe contexto de filtro individual pra cada painel nesse caso. A coluna `Dim_Setor[Setor (Legenda)]` (cópia idêntica de `Setor`) existe só pra contornar isso: colocando a original em Múltiplos Pequenos e a cópia em Legenda, cada painel passa a ter contexto de série próprio, permitindo cor por `SWITCH(SELECTEDVALUE(...))` (medida `Cor Dinamica Setor`).
+
+Tentar usar a mesma coluna física nos dois campos gera o erro `InvalidOrMalformedDataShapeBinding_RepeatedIndicesProjectionsOrGroupBy`.
+
+## Medidas de resumo em texto (VAR mais RETURN concatenado)
+Todas as páginas têm 1 medida de resumo textual (`Resumo Estados`, `Resumo Rotatividade Salario`, `Resumo Evolucao Setor`, `Resumo Comparativo A x B`), construídas com tabelas virtuais via `ADDCOLUMNS`, `FILTER`, `TOPN` dentro de `VAR`, retornando uma frase montada com `FORMAT` e concatenação de texto. Evita criar múltiplas medidas auxiliares (líder, segundo colocado, contagem) que só seriam usadas uma vez.
