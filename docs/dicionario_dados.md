@@ -1,43 +1,62 @@
 # Dicionário de Dados
 
-## Tabela 4 — Saldo por UF e Setor (jul/2026, foto única)
-Cabeçalho real: linha 6. Dados: linha 7 em diante.
+## Fontes originais (abas do Excel usadas)
+Tabela 4 (saldo UF x setor), Tabela 6 (série mensal por setor), Tabela 9 (salário nacional mensal), Tabela 10 (rotatividade por setor), Tabela 11 (rotatividade por UF/região).
+
+## Dimensões
+
+### Dim_Setor
+Combina os setores das Tabelas 4, 6 e 10 (mesma taxonomia CNAE 2.0 agrupada), com `Text.Proper` mais `Text.Trim` pra eliminar duplicata por capitalização, e exclui a linha "Total".
 | Coluna | Descrição |
 |---|---|
-| Grupamento de Atividades Econômicas | Setor (linha) |
-| Unidade da Federação | UF (colunas C:AC) |
-| Valor | Saldo de vagas em jul/2026 |
+| Setor | Nome do setor, padronizado em Proper Case |
+| Nivel | 1, 2 ou 3: profundidade na hierarquia de grupamento (ver `decisoes_modelagem.md`) |
+| EhAgregador | TRUE se a linha é soma de outras linhas da mesma coluna Setor (ex: "Indústria Geral", "Serviços") |
+| Setor (Legenda) | Cópia idêntica de Setor, existe só pra contornar limitação do visual Small Multiples, que não aceita a mesma coluna em Múltiplos Pequenos e Legenda ao mesmo tempo |
 
-## Tabela 6 — Evolução Mensal por Setor (jan/2020–jul/2026)
-Cabeçalho de mês: linha 5 (mesclado, 4 ou 5 colunas por mês).
-Cabeçalho de métrica: linha 6. Dados: linha 7 em diante.
-| Métrica | Descrição |
-|---|---|
-| Estoque | Vínculos ativos no mês |
-| Admissões | Contratações no mês |
-| Desligamentos | Desligamentos no mês |
-| Saldos | Admissões − Desligamentos |
-| Variação Relativa (%) | Var. do estoque vs mesmo mês do ano anterior (ausente em jan/2020) |
+### Dim_Setor_A / Dim_Setor_B
+Cópias (via referência) de `Dim_Setor`, sem relacionamento com o resto do modelo. Usadas para permitir 2 slicers de setor independentes (um não filtra o outro), disponíveis pra uma visão de comparação de dois setores lado a lado. O cruzamento com a tabela fato é feito via `TREATAS` dentro das medidas, não por relacionamento.
 
-Obs.: os dois últimos blocos de colunas ("Acumulado do Ano" e "Últimos 12 Meses") não são meses e devem ser tratados à parte ou descartados na Power Query.
+### Dim_UF
+Lista de UFs distintas vinda da Tabela 4.
 
-## Tabela 9 — Salário Médio Real (nacional, mensal)
-Cabeçalho: linha 5. Dados: linha 6 a 84.
-Atenção: **não tem quebra por setor**, é só Brasil.
+### Dim_Data
+Combina os meses de `stg_Tabela6` e `stg_Tabela9`, convertidos de texto ("Janeiro/2020") pra data real via tabela de tradução de nomes de mês em português.
 | Coluna | Descrição |
 |---|---|
-| Mês | Competência |
-| Salário Médio Real de Admissão | Deflacionado pelo INPC |
-| Salário Médio Real de Desligamento | Deflacionado pelo INPC |
+| Mes | Texto original ("Julho/2026") |
+| Data | Data real (primeiro dia do mês) |
+| Ano | Ano extraído de Data |
+| MesNumero | Número do mês (1 a 12) |
 
-## Tabela 10 — Taxa de Rotatividade por Setor (ago/25–jul/26, foto única)
-Cabeçalho: linha 6. Dados: linha 7 em diante.
+## Fatos
+
+### Fato_Serie_Mensal (fonte: Tabela 6)
+Formato longo: 1 linha por Setor x Mês x Métrica.
 | Coluna | Descrição |
 |---|---|
-| Admissões, Desligamentos, Estoque Médio, Taxa de Rotatividade | Acumulado 12 meses |
+| Setor, Mes, Metrica, Valor | Ver estrutura original |
+| EhTotal | TRUE só na linha "Total" |
+| EhAgregador | TRUE nas linhas que somam outras linhas da mesma coluna (ver hierarquia) |
+| Nivel | 0 (Total), 1, 2 ou 3 |
+| Data | Data real do mês, usada pra relacionamento com Dim_Data e para funções de time intelligence (DATEADD) |
 
-## Tabela 11 — Taxa de Rotatividade por Região/UF (ago/25–jul/26, foto única)
-Mesma estrutura da Tabela 10, granularidade geográfica em vez de setorial.
+Métricas presentes: Estoque, Admissões, Desligamentos, Saldos, Variação Relativa (%).
 
-## Chave de cruzamento entre tabelas
-Nome do setor é **texto livre**, igual entre Tabelas 4, 6 e 10 (mesma taxonomia CNAE 2.0 agrupada). Usar como chave direta, sem tabela de mapeamento.
+### Fato_Saldo_UF_Setor (fonte: Tabela 4)
+Granularidade: Setor x UF, foto única (jul/2026). Colunas: Setor, UF, Saldo.
+
+### Fato_Rotatividade_Setor (fonte: Tabela 10)
+Foto única (ago/2025 a jul/2026). Colunas: Setor, Admissoes, Desligamentos, EstoqueMedio, TaxaRotatividade. Atenção: TaxaRotatividade vem em escala percentual crua (ex: 59.84, não 0.5984), medidas que a exibem via `FORMAT(..., "%")` em DAX (não formatação nativa de campo) precisam dividir por 100 antes.
+
+### Fato_Rotatividade_UF (fonte: Tabela 11)
+Mesma estrutura de Fato_Rotatividade_Setor, mas por UF/Região.
+| Coluna extra | Descrição |
+|---|---|
+| Nivel | "Brasil", "Região" ou "UF": classifica a granularidade de cada linha, já que a fonte mistura os 3 níveis geográficos na mesma coluna UF |
+
+### Fato_Salario_Nacional (fonte: Tabela 9)
+Série mensal, só nacional (sem quebra por setor). Colunas: Mes, SalarioMedioAdmissao, SalarioMedioDesligamento.
+
+## Chaves de cruzamento
+Nome do setor é texto padronizado (Proper Case), idêntico entre `Dim_Setor` e as 3 fatos que o usam, usado como chave direta via relacionamento, sem tabela de mapeamento adicional.
