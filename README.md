@@ -7,7 +7,8 @@ Arquivo original do MTE: `data/raw/3-tabelas_Julho_de_2026.xlsx`
 
 ## Estrutura
 
-- `data/raw/`: arquivo original, sem alteração
+- `data/raw/`: arquivo original do MTE, sem alteração
+- `data/br-states.json`: TopoJSON customizado dos estados brasileiros, usado no visual Mapa de Formas (Shape Map) da página Rotatividade por Região
 - `powerbi/`: projeto Power BI no formato .pbip (Report + SemanticModel)
 - `docs/`: dicionário de dados e decisões de modelagem
 - `assets/screenshots/`: prints do relatório final
