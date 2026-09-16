@@ -1,0 +1,43 @@
+table Fato_Salario_Nacional
+	lineageTag: 35a8e877-a3b1-41f4-8ea3-3a787c17e0bf
+
+	column Mes
+		dataType: string
+		lineageTag: 5cd3ec6a-8a1b-4054-b7c5-d725fbfc3f27
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalarioMedioAdmissao
+		dataType: double
+		lineageTag: fa129922-888e-42f2-bfa0-2f795bd445e3
+		summarizeBy: sum
+		sourceColumn: SalarioMedioAdmissao
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SalarioMedioDesligamento
+		dataType: double
+		lineageTag: 991ff158-8069-4456-85c4-465f1042777a
+		summarizeBy: sum
+		sourceColumn: SalarioMedioDesligamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fato_Salario_Nacional = m
+		mode: import
+		source =
+				let
+				    Fonte = stg_Tabela9
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

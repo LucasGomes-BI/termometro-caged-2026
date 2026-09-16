@@ -1,0 +1,23 @@
+table Dim_UF
+	lineageTag: d2a691d8-a0e4-47c7-b32a-295c2aef5fc5
+
+	column UF
+		dataType: string
+		lineageTag: f3bd4614-ba48-48ce-a595-2009cdbf45d7
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_UF = m
+		mode: import
+		source =
+				let
+				    Origem = Table.Distinct(Table.SelectColumns(stg_Tabela4, {"UF"}))
+				in
+				    Origem
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

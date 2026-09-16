@@ -1,0 +1,229 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "44baabbb3a722a8a4812",
+  "position": {
+    "x": 29.025726857975865,
+    "y": 850.03914369786457,
+    "z": 3000,
+    "height": 319.28299543773448,
+    "width": 1055.2924979078368,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Setor"
+                    }
+                  },
+                  "Property": "Setor"
+                }
+              },
+              "queryRef": "Dim_Setor.Setor",
+              "nativeQueryRef": "Setor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medida"
+                    }
+                  },
+                  "Property": "Admissoes Rotatividade"
+                }
+              },
+              "queryRef": "_Medida.Admissoes Rotatividade",
+              "nativeQueryRef": "Admissões",
+              "displayName": "Admissões"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medida"
+                    }
+                  },
+                  "Property": "Desligamentos Rotatividade"
+                }
+              },
+              "queryRef": "_Medida.Desligamentos Rotatividade",
+              "nativeQueryRef": "Desligamentos",
+              "displayName": "Desligamentos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medida"
+                    }
+                  },
+                  "Property": "Taxa Rotatividade (linha única)"
+                }
+              },
+              "queryRef": "_Medida.Taxa Rotatividade (linha única)",
+              "nativeQueryRef": "Taxa de Rotatividade",
+              "displayName": "Taxa de Rotatividade"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medida"
+                  }
+                },
+                "Property": "Taxa Rotatividade (linha única)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "601.217021602112D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Dim_Setor.Setor"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ranking de Rotatividade por Setor'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#242424'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fato_Rotatividade_Setor · ago/2025–jul/2026, ordenado por taxa'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "italic": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

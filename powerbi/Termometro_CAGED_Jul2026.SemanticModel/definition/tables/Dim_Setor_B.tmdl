@@ -1,0 +1,41 @@
+table Dim_Setor_B
+	lineageTag: be30073b-4cb1-433a-b4d2-c4a327bab3e9
+
+	column Setor
+		dataType: string
+		lineageTag: 71b00084-f0b0-4b2d-bdae-6ca62053db8b
+		summarizeBy: none
+		sourceColumn: Setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivel
+		dataType: int64
+		formatString: 0
+		lineageTag: 917083bf-fa12-46e0-bbb6-656748010189
+		summarizeBy: sum
+		sourceColumn: Nivel
+
+		annotation SummarizationSetBy = Automatic
+
+	column EhAgregador
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9e8e14af-78cc-4186-94f2-fcd07644c162
+		summarizeBy: none
+		sourceColumn: EhAgregador
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Setor_B = m
+		mode: import
+		source =
+				let
+				    Fonte = Dim_Setor
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

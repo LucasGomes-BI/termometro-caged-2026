@@ -1,0 +1,533 @@
+table _Medida
+	lineageTag: 4c2951c8-317b-47b0-91e3-6a8c67acb85e
+
+	measure Estoque =
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Estoque",
+			    Fato_Serie_Mensal[EhTotal] = FALSE,
+			    Fato_Serie_Mensal[EhAgregador] = FALSE
+			)
+		formatString: 0
+		displayFolder: Emprego
+		lineageTag: 5f20774a-9c48-4bc2-b886-124150c66ef5
+
+	measure Admissoes =
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Admissões",
+			    Fato_Serie_Mensal[EhTotal] = FALSE,
+			    Fato_Serie_Mensal[EhAgregador] = FALSE
+			)
+		displayFolder: Emprego
+		lineageTag: 7b730443-ab5d-49d0-a3d6-6d86117c601e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Desligamentos =
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Desligamentos",
+			    Fato_Serie_Mensal[EhTotal] = FALSE,
+			    Fato_Serie_Mensal[EhAgregador] = FALSE
+			)
+		displayFolder: Emprego
+		lineageTag: f9fa5044-5e8c-42a0-8394-9b9ef488fd2b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Saldo =
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Saldos",
+			    Fato_Serie_Mensal[EhTotal] = FALSE,
+			    Fato_Serie_Mensal[EhAgregador] = FALSE
+			)
+		displayFolder: Emprego
+		lineageTag: 0831ac4d-859f-4ca3-8cc8-6e790b4d2645
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Saldo Acumulado 12M' =
+			
+			CALCULATE(
+			    [Saldo],
+			    DATESINPERIOD(Dim_Data[Data], MAX(Dim_Data[Data]), -12, MONTH)
+			)
+		displayFolder: Emprego
+		lineageTag: 0a8dffa6-c7f8-4e3a-b766-34c83da5860d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Variacao % Interanual Nacional' =
+			
+			CALCULATE(
+			    AVERAGE(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Variação Relativa (%)",
+			    Fato_Serie_Mensal[EhTotal] = TRUE
+			)
+		displayFolder: Emprego
+		lineageTag: 07cb5e1a-39e4-4fe7-889c-655fe2b46dea
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Saldo UF' = SUM(Fato_Saldo_UF_Setor[Saldo])
+		formatString: 0
+		displayFolder: Saldo UF
+		lineageTag: eb5927b7-8912-4fb8-b521-1129079a92d4
+
+	measure 'Taxa Rotatividade (linha única)' = SELECTEDVALUE(Fato_Rotatividade_Setor[TaxaRotatividade])
+		displayFolder: Rotatividade
+		lineageTag: bf0f6d6f-31f3-47bf-a4aa-ff383886fd6b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Admissoes Rotatividade' = SUM(Fato_Rotatividade_Setor[Admissoes])
+		formatString: 0
+		displayFolder: Rotatividade
+		lineageTag: 1b4abaaf-0399-4a55-ae07-a314c8f3e645
+
+	measure 'Desligamentos Rotatividade' = SUM(Fato_Rotatividade_Setor[Desligamentos])
+		formatString: 0
+		displayFolder: Rotatividade
+		lineageTag: d07ae7e5-0dc8-43e2-9c8e-e63e54241f5f
+
+	measure 'Estoque Medio Rotatividade' = SUM(Fato_Rotatividade_Setor[EstoqueMedio])
+		displayFolder: Rotatividade
+		lineageTag: 0edec9ed-9a5f-43ee-936b-ac160b3f7ee5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taxa Rotatividade Recalculada' =
+			
+			DIVIDE(
+			    ([Admissoes Rotatividade] + [Desligamentos Rotatividade]) / 2,
+			    [Estoque Medio Rotatividade]
+			)
+		displayFolder: Rotatividade
+		lineageTag: dad4a23f-1ce3-4dd8-b036-7f645df43fa1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taxa Rotatividade UF Recalculada' =
+			
+			CALCULATE(
+			    DIVIDE(
+			        (SUM(Fato_Rotatividade_UF[Admissoes]) + SUM(Fato_Rotatividade_UF[Desligamentos])) / 2,
+			        SUM(Fato_Rotatividade_UF[EstoqueMedio])
+			    ),
+			    Fato_Rotatividade_UF[Nivel] = "UF"
+			)
+		displayFolder: Rotatividade
+		lineageTag: fe8958d3-5534-4b93-88e1-b22f6f0d62f7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Salario Medio Admissao' = AVERAGE(Fato_Salario_Nacional[SalarioMedioAdmissao])
+		displayFolder: Salário
+		lineageTag: eddd63c1-a7e2-4b6e-bcf9-b44bbf1d2273
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Salario Medio Desligamento' = AVERAGE(Fato_Salario_Nacional[SalarioMedioDesligamento])
+		displayFolder: Salário
+		lineageTag: 5c53c6e4-f1be-4fa8-9b58-1fdefd7a2199
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gap Salarial %' = DIVIDE([Salario Medio Desligamento] - [Salario Medio Admissao], [Salario Medio Admissao])
+		displayFolder: Salário
+		lineageTag: d1fa8134-1ab8-433c-9aa4-f0135e1a375a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Saldo Nacional' =
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Saldos",
+			    Fato_Serie_Mensal[EhTotal] = TRUE
+			)
+		displayFolder: Emprego
+		lineageTag: fd9a5056-c468-4848-8e80-fb5f19de7def
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Estoque Nacional Contexto' =
+			
+			VAR ValorAtual = [Estoque Nacional]
+			VAR ValorMesAnterior = CALCULATE([Estoque Nacional], DATEADD(Dim_Data[Data], -1, MONTH))
+			VAR ValorAnoAnterior = CALCULATE([Estoque Nacional], DATEADD(Dim_Data[Data], -12, MONTH))
+			VAR VarMoM = ValorAtual - ValorMesAnterior
+			VAR VarYoYPct = DIVIDE(ValorAtual - ValorAnoAnterior, ABS(ValorAnoAnterior))
+			RETURN
+			    "vs mês anterior: " & FORMAT(VarMoM, "+#,##0;-#,##0") &
+			    "  |  vs ano anterior: " & FORMAT(VarYoYPct, "+0.0%;-0.0%")
+		displayFolder: Emprego
+		lineageTag: 2007a440-6129-4fe1-9a94-70ad80e31742
+
+	measure 'Saldo Nacional Contexto' = ```
+			
+			VAR ValorAtual = [Saldo Nacional]
+			VAR ValorMesAnterior = CALCULATE([Saldo Nacional], DATEADD(Dim_Data[Data], -1, MONTH))
+			VAR ValorAnoAnterior = CALCULATE([Saldo Nacional], DATEADD(Dim_Data[Data], -12, MONTH))
+			VAR VarMoM = ValorAtual - ValorMesAnterior
+			VAR VarYoYPct = DIVIDE(ValorAtual - ValorAnoAnterior, ABS(ValorAnoAnterior))
+			RETURN
+			    "vs mês anterior: " & FORMAT(VarMoM, "+#,##0;-#,##0") &
+			    "  |  vs ano anterior: " & FORMAT(VarYoYPct, "+0.0%;-0.0%")
+			
+			```
+		displayFolder: Emprego
+		lineageTag: e0201bfe-e0af-4389-a78a-4a5fc6fa5fc0
+
+	measure 'Admissoes Nacional Contexto' =
+			
+			VAR ValorAtual = [Admissoes Nacional]
+			VAR ValorMesAnterior = CALCULATE([Admissoes Nacional], DATEADD(Dim_Data[Data], -1, MONTH))
+			VAR ValorAnoAnterior = CALCULATE([Admissoes Nacional], DATEADD(Dim_Data[Data], -12, MONTH))
+			VAR VarMoM = ValorAtual - ValorMesAnterior
+			VAR VarYoYPct = DIVIDE(ValorAtual - ValorAnoAnterior, ABS(ValorAnoAnterior))
+			RETURN
+			    "vs mês anterior: " & FORMAT(VarMoM, "+#,##0;-#,##0") &
+			    "  |  vs ano anterior: " & FORMAT(VarYoYPct, "+0.0%;-0.0%")
+		displayFolder: Emprego
+		lineageTag: 43ea4442-2770-4a1b-b0ae-440af87b1e38
+
+	measure 'Desligamentos Nacional Contexto' =
+			
+			VAR ValorAtual = [Desligamentos Nacional]
+			VAR ValorMesAnterior = CALCULATE([Desligamentos Nacional], DATEADD(Dim_Data[Data], -1, MONTH))
+			VAR ValorAnoAnterior = CALCULATE([Desligamentos Nacional], DATEADD(Dim_Data[Data], -12, MONTH))
+			VAR VarMoM = ValorAtual - ValorMesAnterior
+			VAR VarYoYPct = DIVIDE(ValorAtual - ValorAnoAnterior, ABS(ValorAnoAnterior))
+			RETURN
+			    "vs mês anterior: " & FORMAT(VarMoM, "+#,##0;-#,##0") &
+			    "  |  vs ano anterior: " & FORMAT(VarYoYPct, "+0.0%;-0.0%")
+		displayFolder: Emprego
+		lineageTag: 8f0ee4f9-60a9-4a3a-bc80-4a13c61bcf99
+
+	measure Medida
+		displayFolder: Emprego
+		lineageTag: 694ec651-35a9-46b9-bb42-36711390406d
+
+	measure 'Admissoes Nacional' =
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Admissões",
+			    Fato_Serie_Mensal[EhTotal] = TRUE
+			)
+		displayFolder: Emprego
+		lineageTag: 66c11f9a-ee90-4b6d-9668-621baf693ba7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Estoque Nacional' = ```
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Estoque",
+			    Fato_Serie_Mensal[EhTotal] = TRUE
+			)
+			
+			```
+		displayFolder: Emprego
+		lineageTag: 6af1918d-9600-4e2a-9a11-3ace0308cdf6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Desligamentos Nacional' =
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Desligamentos",
+			    Fato_Serie_Mensal[EhTotal] = TRUE
+			)
+		displayFolder: Emprego
+		lineageTag: 52d27a1c-bfac-48b1-bdc7-1d69b40fd0c1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Destaque Pandemia (Fundo)' =
+			
+			IF(
+			    MAX(Dim_Data[Data]) >= DATE(2020,1,1) && MAX(Dim_Data[Data]) <= DATE(2020,4,30),
+			    600000
+			)
+		formatString: 0
+		displayFolder: Emprego
+		lineageTag: b328f891-533b-4bd4-b81c-b13bffe81ae2
+
+	measure 'Taxa Rotatividade Brasil' =
+			
+			CALCULATE(
+			    [Taxa Rotatividade UF Recalculada],
+			    Fato_Rotatividade_UF[Nivel] = "Brasil"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Rotatividade
+		lineageTag: f7576c5a-f1c6-431a-a930-de93d5eb5ff0
+
+	measure 'Rotatividade UF vs Brasil' =
+			
+			[Taxa Rotatividade UF Recalculada] - [Taxa Rotatividade Brasil]
+		displayFolder: Rotatividade
+		lineageTag: 95a09257-69bc-4013-9ff6-44c00be3e04a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Saldo Setor A' =
+			
+			CALCULATE(
+			    SUM(Fato_Saldo_UF_Setor[Saldo]),
+			    TREATAS(VALUES(Dim_Setor_A[Setor]), Fato_Saldo_UF_Setor[Setor])
+			)
+		formatString: 0
+		displayFolder: Saldo Setor
+		lineageTag: 2ae5cd03-960d-47d8-bc7b-5fab80a76032
+
+	measure 'Saldo Setor B' =
+			
+			CALCULATE(
+			    SUM(Fato_Saldo_UF_Setor[Saldo]),
+			    TREATAS(VALUES(Dim_Setor_B[Setor]), Fato_Saldo_UF_Setor[Setor])
+			)
+		formatString: 0
+		displayFolder: Saldo Setor
+		lineageTag: 17a53604-8ea6-4e2f-a5b5-9729838415c9
+
+	measure 'Mostrar em Slicer A' =
+			
+			IF(
+			    SELECTEDVALUE(Dim_Setor_A[Setor]) = SELECTEDVALUE(Dim_Setor_B[Setor]),
+			    0,
+			    1
+			)
+		formatString: 0
+		displayFolder: Saldo Setor
+		lineageTag: 6e7ca647-5b66-4f1f-92ac-4c70d03ce2d7
+
+	measure 'Mostrar em Slicer B' =
+			
+			IF(
+			    SELECTEDVALUE(Dim_Setor_B[Setor]) = SELECTEDVALUE(Dim_Setor_A[Setor]),
+			    0,
+			    1
+			)
+		formatString: 0
+		displayFolder: Saldo Setor
+		lineageTag: 69b20a90-0600-483e-b9e9-d286437e4764
+
+	measure 'Titulo Grafico A' = "Saldo por estado — " & SELECTEDVALUE(Dim_Setor_A[Setor], "selecione um setor")
+		displayFolder: Saldo Setor
+		lineageTag: 9c2483f3-947e-4fc4-bf9f-d41ecdb16d6c
+
+	measure 'Titulo Grafico B' = "Saldo por estado — " & SELECTEDVALUE(Dim_Setor_B[Setor], "selecione um setor")
+		displayFolder: Saldo Setor
+		lineageTag: 2d12da54-ca61-4e15-8fbc-152f67eb3bed
+
+	measure 'Subtitulo Grafico A' =
+			
+			"Saldo nacional: " &
+			FORMAT(CALCULATE([Saldo Setor A], ALL(Dim_UF)), "+#,##0;-#,##0")
+		displayFolder: Saldo Setor
+		lineageTag: bf46fda1-6457-49e9-a926-f2273b5632fa
+
+	measure 'Subtitulo Grafico B' =
+			
+			"Saldo nacional do setor: " &
+			FORMAT(CALCULATE([Saldo Setor B], ALL(Dim_UF)), "+#,##0;-#,##0")
+		displayFolder: Saldo Setor
+		lineageTag: d1512b63-5e86-4821-9aba-af4ae1cc818e
+
+	measure 'Resumo Comparativo A x B' =
+			
+			VAR SetorA = SELECTEDVALUE(Dim_Setor_A[Setor], "Setor A")
+			VAR SetorB = SELECTEDVALUE(Dim_Setor_B[Setor], "Setor B")
+			VAR TotalA = CALCULATE([Saldo Setor A], ALL(Dim_UF))
+			VAR TotalB = CALCULATE([Saldo Setor B], ALL(Dim_UF))
+			VAR Lider = IF(TotalA > TotalB, SetorA, SetorB)
+			VAR Diferenca = ABS(TotalA - TotalB)
+			VAR TabelaComparacao =
+			    ADDCOLUMNS(
+			        VALUES(Dim_UF[UF]),
+			        "ValA", CALCULATE([Saldo Setor A]),
+			        "ValB", CALCULATE([Saldo Setor B])
+			    )
+			VAR QtdEstadosA = COUNTROWS(FILTER(TabelaComparacao, [ValA] > [ValB]))
+			VAR QtdEstadosB = COUNTROWS(FILTER(TabelaComparacao, [ValB] > [ValA]))
+			VAR QtdTotal = COUNTROWS(TabelaComparacao)
+			RETURN
+			    SetorA & " gerou " & FORMAT(TotalA, "+#,##0;-#,##0") & " vagas líquidas nacionalmente; " &
+			    SetorB & " gerou " & FORMAT(TotalB, "+#,##0;-#,##0") & ". " &
+			    Lider & " liderou por " & FORMAT(Diferenca, "#,##0") & " vagas. " &
+			    SetorA & " venceu em " & QtdEstadosA & " de " & QtdTotal & " estados; " &
+			    SetorB & " venceu em " & QtdEstadosB & "."
+		displayFolder: Saldo Setor
+		lineageTag: e1f2e35d-0bec-460d-beca-6d6a6f976a0c
+
+	measure 'Teste 3 Texto Exato' =
+			
+			COUNTROWS(
+			    FILTER(
+			        Fato_Saldo_UF_Setor,
+			        EXACT([Setor], "Administração Pública, Defesa E Seguridade Social, Educação, Saúde Humana E Serviços Sociais")
+			    )
+			)
+		formatString: 0
+		displayFolder: Saldo Setor
+		lineageTag: db499039-cfe8-43e9-a89f-4c9ad335ac24
+
+	measure 'Resumo Estados' =
+			
+			VAR SetorSelecionado = SELECTEDVALUE(Dim_Setor[Setor], "todos os setores")
+			VAR TabelaEstados =
+			    ADDCOLUMNS(
+			        VALUES(Dim_UF[UF]),
+			        "Val", CALCULATE([Saldo UF])
+			    )
+			VAR TotalNacional = SUMX(TabelaEstados, [Val])
+			VAR Lider = TOPN(1, TabelaEstados, [Val], DESC)
+			VAR NomeLider = MAXX(Lider, [UF])
+			VAR ValorLider = MAXX(Lider, [Val])
+			VAR PctLider = DIVIDE(ValorLider, TotalNacional)
+			VAR SegundoColocado = TOPN(1, FILTER(TabelaEstados, [UF] <> NomeLider), [Val], DESC)
+			VAR NomeSegundo = MAXX(SegundoColocado, [UF])
+			VAR ValorSegundo = MAXX(SegundoColocado, [Val])
+			VAR QtdNegativos = COUNTROWS(FILTER(TabelaEstados, [Val] < 0))
+			RETURN
+			    NomeLider & " lidera com " & FORMAT(ValorLider, "+#,##0;-#,##0") &
+			    " vagas líquidas (" & FORMAT(PctLider, "0.0%") & " do saldo nacional em " & SetorSelecionado & "), " &
+			    FORMAT(ValorLider - ValorSegundo, "#,##0") & " à frente de " & NomeSegundo & ". " &
+			    QtdNegativos & " estado(s) tiveram saldo negativo no período."
+		displayFolder: Saldo Setor
+		lineageTag: 04de7ce7-4ccb-4d9c-8142-6900672b4ff5
+
+	measure 'Saldo Setor Jul2026' =
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Saldos",
+			    Fato_Serie_Mensal[Mes] = "Julho/2026"
+			)
+		displayFolder: Saldo Setor
+		lineageTag: 094f4159-eedd-486e-b5bf-6e8f3445a618
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Resumo Rotatividade Salario' =
+			
+			VAR TabelaSetor =
+			    FILTER(
+			        ADDCOLUMNS(
+			            VALUES(Dim_Setor[Setor]),
+			            "Taxa", CALCULATE([Taxa Rotatividade (linha única)]),
+			            "Saldo", CALCULATE([Saldo Setor Jul2026]),
+			            "NivelSetor", CALCULATE(MAX(Dim_Setor[Nivel]))
+			        ),
+			        [NivelSetor] = 1
+			    )
+			VAR MaiorRotatividade = TOPN(1, TabelaSetor, [Taxa], DESC)
+			VAR NomeSetor = MAXX(MaiorRotatividade, [Setor])
+			VAR TaxaSetor = MAXX(MaiorRotatividade, [Taxa]) / 100
+			VAR SaldoSetor = MAXX(MaiorRotatividade, [Saldo])
+			VAR TendenciaSaldo = IF(SaldoSetor >= 0, "positivo", "negativo")
+			VAR GapAtual =
+			    CALCULATE(
+			        [Gap Salarial %],
+			        Fato_Salario_Nacional[Mes] = "Julho/2026"
+			    )
+			RETURN
+			    NomeSetor & " tem a maior rotatividade entre os setores (" & FORMAT(TaxaSetor, "0.0%") &
+			    "), com saldo " & TendenciaSaldo & " de " & FORMAT(SaldoSetor, "+#,##0;-#,##0") &
+			    " vagas em jul/2026 - alta renovação não significa necessariamente encolhimento. " &
+			    "No mesmo mês, o salário real de desligamento ficou " &
+			    FORMAT(GapAtual, "+0.0%;-0.0%") & " em relação ao de admissão."
+		displayFolder: Rotatividade
+		lineageTag: 11369648-c41b-461f-92bc-07bb4ab696f0
+
+	measure 'Saldo Nivel1' =
+			
+			CALCULATE(
+			    SUM(Fato_Serie_Mensal[Valor]),
+			    Fato_Serie_Mensal[Metrica] = "Saldos",
+			    Fato_Serie_Mensal[EhTotal] = FALSE
+			)
+		displayFolder: Saldo Setor
+		lineageTag: 1c1fdefe-fcc9-4abb-802b-3d7a13aae07d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cor Dinamica Setor' =
+			
+			SWITCH(
+			    SELECTEDVALUE(Dim_Setor[Setor (Legenda)]),
+			    "Agricultura, Pecuária, Produção Florestal, Pesca E Aquicultura", "#2F7566",
+			    "Comércio; Reparação De Veículos Automotores E Motocicletas", "#6B7F8C",
+			    "Construção", "#C4802E",
+			    "Indústria Geral", "#16324F",
+			    "Serviços", "#A3403B",
+			    "#B8C2CA"
+			)
+		displayFolder: Saldo Setor
+		lineageTag: 9fddb044-7b4e-4450-94d5-42b095e98ace
+
+	measure 'Resumo Evolucao Setor' =
+			
+			VAR TabelaSetor =
+			    FILTER(
+			        ADDCOLUMNS(
+			            VALUES(Dim_Setor[Setor]),
+			            "SaldoAtual", CALCULATE([Saldo Nivel1], Fato_Serie_Mensal[Mes] = "Julho/2026"),
+			            "SaldoMinPandemia",
+			                CALCULATE(
+			                    MINX(VALUES(Fato_Serie_Mensal[Mes]), [Saldo Nivel1]),
+			                    Fato_Serie_Mensal[Mes] IN {"Janeiro/2020", "Fevereiro/2020", "Março/2020", "Abril/2020"}
+			                ),
+			            "NivelSetor", CALCULATE(MAX(Dim_Setor[Nivel]))
+			        ),
+			        [NivelSetor] = 1
+			    )
+			VAR MaiorQueda = TOPN(1, TabelaSetor, [SaldoMinPandemia], ASC)
+			VAR NomeMaiorQueda = MAXX(MaiorQueda, [Setor])
+			VAR ValorMaiorQueda = MAXX(MaiorQueda, [SaldoMinPandemia])
+			VAR MelhorRecuperacao = TOPN(1, TabelaSetor, [SaldoAtual], DESC)
+			VAR NomeMelhorRecuperacao = MAXX(MelhorRecuperacao, [Setor])
+			VAR ValorAtualMelhor = MAXX(MelhorRecuperacao, [SaldoAtual])
+			RETURN
+			    NomeMaiorQueda & " teve a queda mais severa na pandemia (" &
+			    FORMAT(ValorMaiorQueda, "+#,##0;-#,##0") & " em 2020). " &
+			    "Em jul/2026, " & NomeMelhorRecuperacao & " lidera o saldo mensal com " &
+			    FORMAT(ValorAtualMelhor, "+#,##0;-#,##0") & " vagas líquidas."
+		displayFolder: Saldo Setor
+		lineageTag: 33a2afe5-3eb1-46b4-93ca-b66f2a839135
+
+	column 'Coluna 1'
+		dataType: string
+		isHidden
+		lineageTag: 06ddab14-f477-472a-928e-c4a65239c20d
+		summarizeBy: none
+		sourceColumn: Coluna 1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Medida = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}})
+				in
+				    #"Tipo Alterado"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

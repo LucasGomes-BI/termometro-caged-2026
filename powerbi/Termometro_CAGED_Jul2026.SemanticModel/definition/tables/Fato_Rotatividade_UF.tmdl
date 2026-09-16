@@ -1,0 +1,74 @@
+table Fato_Rotatividade_UF
+	lineageTag: a4f3cdf0-5357-4415-a7f4-1e45c667f688
+
+	column UF
+		dataType: string
+		lineageTag: bdf2dbc4-f031-407c-ab46-86dcd5275505
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admissoes
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ed455f9-0ae7-485a-903c-96c68eea19d5
+		summarizeBy: sum
+		sourceColumn: Admissoes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Desligamentos
+		dataType: int64
+		formatString: 0
+		lineageTag: 660562f3-952a-4e0a-83a9-9a89845e8f2e
+		summarizeBy: sum
+		sourceColumn: Desligamentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstoqueMedio
+		dataType: double
+		lineageTag: 868480fb-5285-48c7-842e-3461bdc317a0
+		summarizeBy: sum
+		sourceColumn: EstoqueMedio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxaRotatividade
+		dataType: double
+		lineageTag: 3f8aa7e7-81bf-406c-a642-cda42b8eb37c
+		summarizeBy: sum
+		sourceColumn: TaxaRotatividade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Nivel
+		dataType: string
+		lineageTag: b077d657-841c-4188-828d-0af0992bcb91
+		summarizeBy: none
+		sourceColumn: Nivel
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fato_Rotatividade_UF = m
+		mode: import
+		source =
+				let
+				    Origem = stg_Tabela11,
+				    Regioes = {"Norte","Nordeste","Sudeste","Sul","Centro-Oeste"},
+				    AddNivel = Table.AddColumn(Origem, "Nivel", each
+				        if [UF] = "Brasil" then "Brasil"
+				        else if List.Contains(Regioes, [UF]) then "Região"
+				        else "UF")
+				in
+				    AddNivel
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

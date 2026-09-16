@@ -1,0 +1,6173 @@
+cultureInfo pt-BR
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim setor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_Setor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor.setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor",
+			          "ConceptualProperty": "Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_UF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim UF": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_UF": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_UF.uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_UF",
+			          "ConceptualProperty": "UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_Data": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dim information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dim figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dim record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "Data"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_data.data.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "VariationSource": "Data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.data.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "VariationSource": "Data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.data.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "VariationSource": "Data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.data.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "VariationSource": "Data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.data.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "VariationSource": "Data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.mes_numero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "MesNumero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes numero": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me numero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNumero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fato saldo UF setor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fato_Saldo_UF_Setor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor.setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Saldo_UF_Setor",
+			          "ConceptualProperty": "Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor.uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Saldo_UF_Setor",
+			          "ConceptualProperty": "UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor.saldo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Saldo_UF_Setor",
+			          "ConceptualProperty": "Saldo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Serie_Mensal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fato serie mensal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fato_Serie_Mensal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal.setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Serie_Mensal",
+			          "ConceptualProperty": "Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Serie_Mensal",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal.metrica": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Serie_Mensal",
+			          "ConceptualProperty": "Metrica"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "metrica": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal.valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Serie_Mensal",
+			          "ConceptualProperty": "Valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Salario_Nacional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fato salario nacional": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fato_Salario_Nacional": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Salario_Nacional",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional.salario_medio_admissao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Salario_Nacional",
+			          "ConceptualProperty": "SalarioMedioAdmissao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio admissao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SalarioMedioAdmissao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional.salario_medio_desligamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Salario_Nacional",
+			          "ConceptualProperty": "SalarioMedioDesligamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio desligamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SalarioMedioDesligamento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fato rotatividade setor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fato_Rotatividade_Setor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor.setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_Setor",
+			          "ConceptualProperty": "Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor.admissoe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_Setor",
+			          "ConceptualProperty": "Admissoes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "admissoe": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor.desligamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_Setor",
+			          "ConceptualProperty": "Desligamentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "desligamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor.estoque_medio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_Setor",
+			          "ConceptualProperty": "EstoqueMedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estoque medio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EstoqueMedio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor.taxa_rotatividade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_Setor",
+			          "ConceptualProperty": "TaxaRotatividade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "taxa rotatividade": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "taxon rotatividade": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "TaxaRotatividade": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fato rotatividade UF": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fato_Rotatividade_UF": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF.uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_UF",
+			          "ConceptualProperty": "UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF.admissoe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_UF",
+			          "ConceptualProperty": "Admissoes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "admissoe": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF.desligamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_UF",
+			          "ConceptualProperty": "Desligamentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "desligamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF.estoque_medio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_UF",
+			          "ConceptualProperty": "EstoqueMedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estoque medio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EstoqueMedio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF.taxa_rotatividade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_UF",
+			          "ConceptualProperty": "TaxaRotatividade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "taxa rotatividade": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "taxon rotatividade": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "TaxaRotatividade": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF.nivel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Rotatividade_UF",
+			          "ConceptualProperty": "Nivel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.coluna_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Coluna 1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "coluna 1": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.estoque": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Estoque"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estoque": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Estoque total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.admissoe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Admissoes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "admissoe": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Admissões": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.desligamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Desligamentos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "desligamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.saldo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Saldo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Saldo jul/2026": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.saldo_acumulado_12M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Saldo Acumulado 12M"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo acumulado 12M": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.variacao__interanual_nacional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Variacao % Interanual Nacional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variacao % interanual nacional": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variacao percentage interanual nacional": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "variacao pct interanual nacional": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "Var. 12 meses": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.saldo_UF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Saldo UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo UF": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.taxa_rotatividade_linha_única": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Taxa Rotatividade (linha única)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "taxa rotatividade (linha única)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "taxa rotatividade": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Taxa de Rotatividade": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Taxa de Rotatividade (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.admissoes_rotatividade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Admissoes Rotatividade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "admissoes rotatividade": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Admissões": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.desligamentos_rotatividade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Desligamentos Rotatividade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "desligamentos rotatividade": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Desligamentos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.estoque_medio_rotatividade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Estoque Medio Rotatividade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estoque medio rotatividade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.taxa_rotatividade_recalculada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Taxa Rotatividade Recalculada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "taxa rotatividade recalculada": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.taxa_rotatividade_UF_recalculada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Taxa Rotatividade UF Recalculada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "taxa rotatividade UF recalculada": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.salario_medio_admissao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Salario Medio Admissao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio admissao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Sal. Med. Admissão": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.salario_medio_desligamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Salario Medio Desligamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salario medio desligamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Sal. Med. Desligamento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.gap_salarial_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Gap Salarial %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gap salarial %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "gap salarial percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "gap salarial pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal.eh_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Serie_Mensal",
+			          "ConceptualProperty": "EhTotal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eh total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EhTotal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "eh aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "eh overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal.eh_agregador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Serie_Mensal",
+			          "ConceptualProperty": "EhAgregador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eh agregador": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EhAgregador": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal.nivel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Serie_Mensal",
+			          "ConceptualProperty": "Nivel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.saldo_nacional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Saldo Nacional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo nacional": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Saldo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.estoque_nacional_contexto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Estoque Nacional Contexto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estoque nacional contexto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.saldo_nacional_contexto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Saldo Nacional Contexto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo nacional contexto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal.data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fato_Serie_Mensal",
+			          "ConceptualProperty": "Data"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "entity__medida.admissoes_nacional_contexto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Admissoes Nacional Contexto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "admissoes nacional contexto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.desligamentos_nacional_contexto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Desligamentos Nacional Contexto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "desligamentos nacional contexto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Medida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.admissoes_nacional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Admissoes Nacional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "admissoes nacional": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.estoque_nacional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Estoque Nacional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estoque nacional": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.desligamentos_nacional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Desligamentos Nacional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "desligamentos nacional": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.destaque_pandemia_fundo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Destaque Pandemia (Fundo)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "destaque pandemia (fundo)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "destaque pandemia": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.taxa_rotatividade_brasil": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Taxa Rotatividade Brasil"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "taxa rotatividade brasil": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Taxa Rotatividade": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.rotatividade_UF_vs_brasil": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Rotatividade UF vs Brasil"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rotatividade UF vs brasil": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor.nivel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor",
+			          "ConceptualProperty": "Nivel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor.eh_agregador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor",
+			          "ConceptualProperty": "EhAgregador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eh agregador": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EhAgregador": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.saldo_setor_a": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Saldo Setor A"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo setor a": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.saldo_setor_b": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Saldo Setor B"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo setor b": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.mostrar_em_slicer_a": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Mostrar em Slicer A"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mostrar em slicer a": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.mostrar_em_slicer_b": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Mostrar em Slicer B"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mostrar em slicer b": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.titulo_grafico_a": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Titulo Grafico A"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "titulo grafico a": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.titulo_grafico_b": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Titulo Grafico B"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "titulo grafico b": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.subtitulo_grafico_a": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Subtitulo Grafico A"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "subtitulo grafico a": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.subtitulo_grafico_b": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Subtitulo Grafico B"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "subtitulo grafico b": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.resumo_comparativo_a_x_b": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Resumo Comparativo A x B"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "resumo comparativo a x b": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.teste_3_texto_exato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Teste 3 Texto Exato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "teste 3 texto exato": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor_A": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor_A"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim setor A": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_Setor_A": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor_A.setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor_A",
+			          "ConceptualProperty": "Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor_A.nivel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor_A",
+			          "ConceptualProperty": "Nivel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor_A.eh_agregador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor_A",
+			          "ConceptualProperty": "EhAgregador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eh agregador": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EhAgregador": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor_B": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor_B"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim setor B": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_Setor_B": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor_B.setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor_B",
+			          "ConceptualProperty": "Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor_B.nivel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor_B",
+			          "ConceptualProperty": "Nivel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_setor_B.eh_agregador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Setor_B",
+			          "ConceptualProperty": "EhAgregador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eh agregador": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EhAgregador": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.resumo_estados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Resumo Estados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "resumo estados": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.saldo_setor_Jul2026": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Saldo Setor Jul2026"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo setor Jul2026": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Saldo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.resumo_rotatividade_salario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Resumo Rotatividade Salario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "resumo rotatividade salario": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.saldo_Nivel1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medida",
+			          "ConceptualProperty": "Saldo Nivel1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo Nivel1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Saldo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "dim_data_data_trimestre_has_dim_data_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data.data.trimestre": {
+			          "Target": {
+			            "Entity": "dim_data.data.trimestre"
+			          }
+			        },
+			        "dim_data.data.mê": {
+			          "Target": {
+			            "Entity": "dim_data.data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.mê"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_data.data.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_data.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_data_data_ano_has_dim_data_data_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data.data.ano": {
+			          "Target": {
+			            "Entity": "dim_data.data.ano"
+			          }
+			        },
+			        "dim_data.data.trimestre": {
+			          "Target": {
+			            "Entity": "dim_data.data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.ano"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_data.data.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_data.data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos"
+			        }
+			      ]
+			    },
+			    "dim_data_data_hierarquia_de_data_has_dim_data_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_data.data.hierarquia_de_data"
+			          }
+			        },
+			        "dim_data.data.dia": {
+			          "Target": {
+			            "Entity": "dim_data.data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "dim_data_data_hierarquia_de_data_has_dim_data_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_data.data.hierarquia_de_data"
+			          }
+			        },
+			        "dim_data.data.mê": {
+			          "Target": {
+			            "Entity": "dim_data.data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "dim_data_data_hierarquia_de_data_has_dim_data_data_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_data.data.hierarquia_de_data"
+			          }
+			        },
+			        "dim_data.data.trimestre": {
+			          "Target": {
+			            "Entity": "dim_data.data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_data_data_hierarquia_de_data_has_dim_data_data_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_data.data.hierarquia_de_data"
+			          }
+			        },
+			        "dim_data.data.ano": {
+			          "Target": {
+			            "Entity": "dim_data.data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "dim_data_data_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data.data": {
+			          "Target": {
+			            "Entity": "dim_data.data"
+			          }
+			        },
+			        "dim_data.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_data.data.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_dim_UF": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "dim_UF": {
+			          "Target": {
+			            "Entity": "dim_UF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "dim_UF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_dim_UFs"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_dim_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "dim_setor": {
+			          "Target": {
+			            "Entity": "dim_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "dim_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_dim_setors"
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional_has_dim_data": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Salario_Nacional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_salario_nacional": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional"
+			          }
+			        },
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_salario_nacional"
+			            },
+			            "Object": {
+			              "Role": "dim_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_salario_nacionals_have_dim_data"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_dim_data": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          },
+			          "Nouns": [
+			            {
+			              "data": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "dim_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_dim_data"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "fato_serie_mensal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_fato_serie_mensal"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_dim_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "dim_setor": {
+			          "Target": {
+			            "Entity": "dim_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "dim_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_dim_setors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor"
+			            },
+			            "Object": {
+			              "Role": "fato_serie_mensal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setors_have_fato_serie_mensal"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_dim_UF": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "dim_UF": {
+			          "Target": {
+			            "Entity": "dim_UF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "dim_UF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_dim_UFs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_UF"
+			            },
+			            "Object": {
+			              "Role": "fato_saldo_UF_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_UFs_have_fato_saldo_UF_setors"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_dim_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "dim_setor": {
+			          "Target": {
+			            "Entity": "dim_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "dim_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_dim_setors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor"
+			            },
+			            "Object": {
+			              "Role": "fato_saldo_UF_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setors_have_fato_saldo_UF_setors"
+			        }
+			      ]
+			    },
+			    "dim_data_has_fato_salario_nacional": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "fato_salario_nacional": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "fato_salario_nacional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_fato_salario_nacionals"
+			        }
+			      ]
+			    },
+			    "dim_UF_has_fato_rotatividade_UF": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_UF": {
+			          "Target": {
+			            "Entity": "dim_UF"
+			          }
+			        },
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_UF"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_UF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_UFs_have_fato_rotatividade_UFs"
+			        }
+			      ]
+			    },
+			    "dim_setor_has_fato_rotatividade_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor": {
+			          "Target": {
+			            "Entity": "dim_setor"
+			          }
+			        },
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setors_have_fato_rotatividade_setors"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_saldo_Nivel1": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.saldo_Nivel1": {
+			          "Target": {
+			            "Entity": "entity__medida.saldo_Nivel1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.saldo_Nivel1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_saldo_Nivel1"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_resumo_rotatividade_salario": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medida"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.resumo_rotatividade_salario": {
+			          "Target": {
+			            "Entity": "entity__medida.resumo_rotatividade_salario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.resumo_rotatividade_salario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_resumo_rotatividade_salario"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_saldo_setor_Jul2026": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.saldo_setor_Jul2026": {
+			          "Target": {
+			            "Entity": "entity__medida.saldo_setor_Jul2026"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.saldo_setor_Jul2026"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_saldo_setor_Jul2026"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_resumo_estados": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medida"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.resumo_estados": {
+			          "Target": {
+			            "Entity": "entity__medida.resumo_estados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.resumo_estados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_resumo_estados"
+			        }
+			      ]
+			    },
+			    "dim_setor_B_has_eh_agregador": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_B"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_B": {
+			          "Target": {
+			            "Entity": "dim_setor_B"
+			          }
+			        },
+			        "dim_setor_B.eh_agregador": {
+			          "Target": {
+			            "Entity": "dim_setor_B.eh_agregador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_B"
+			            },
+			            "Object": {
+			              "Role": "dim_setor_B.eh_agregador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_B_have_eh_agregadors"
+			        }
+			      ]
+			    },
+			    "dim_setor_B_has_nivel": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_B"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_B": {
+			          "Target": {
+			            "Entity": "dim_setor_B"
+			          }
+			        },
+			        "dim_setor_B.nivel": {
+			          "Target": {
+			            "Entity": "dim_setor_B.nivel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_B"
+			            },
+			            "Object": {
+			              "Role": "dim_setor_B.nivel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_B_have_nivels"
+			        }
+			      ]
+			    },
+			    "dim_setor_B_has_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_B"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_B": {
+			          "Target": {
+			            "Entity": "dim_setor_B"
+			          }
+			        },
+			        "dim_setor_B.setor": {
+			          "Target": {
+			            "Entity": "dim_setor_B.setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_B"
+			            },
+			            "Object": {
+			              "Role": "dim_setor_B.setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_B_have_setors"
+			        }
+			      ]
+			    },
+			    "dim_setor_A_has_eh_agregador": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_A"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_A": {
+			          "Target": {
+			            "Entity": "dim_setor_A"
+			          }
+			        },
+			        "dim_setor_A.eh_agregador": {
+			          "Target": {
+			            "Entity": "dim_setor_A.eh_agregador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_A"
+			            },
+			            "Object": {
+			              "Role": "dim_setor_A.eh_agregador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_A_have_eh_agregadors"
+			        }
+			      ]
+			    },
+			    "dim_setor_A_has_nivel": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_A"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_A": {
+			          "Target": {
+			            "Entity": "dim_setor_A"
+			          }
+			        },
+			        "dim_setor_A.nivel": {
+			          "Target": {
+			            "Entity": "dim_setor_A.nivel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_A"
+			            },
+			            "Object": {
+			              "Role": "dim_setor_A.nivel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_A_have_nivels"
+			        }
+			      ]
+			    },
+			    "dim_setor_A_has_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_A"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_A": {
+			          "Target": {
+			            "Entity": "dim_setor_A"
+			          }
+			        },
+			        "dim_setor_A.setor": {
+			          "Target": {
+			            "Entity": "dim_setor_A.setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_A"
+			            },
+			            "Object": {
+			              "Role": "dim_setor_A.setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_A_have_setors"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_entity__medida_teste_3_texto_exato": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "entity__medida.teste_3_texto_exato": {
+			          "Target": {
+			            "Entity": "entity__medida.teste_3_texto_exato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.teste_3_texto_exato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_teste_3_texto_exato"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_entity__medida_resumo_comparativo_a_x_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "entity__medida.resumo_comparativo_a_x_b": {
+			          "Target": {
+			            "Entity": "entity__medida.resumo_comparativo_a_x_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.resumo_comparativo_a_x_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_resumo_comparativo_a_x_b"
+			        }
+			      ]
+			    },
+			    "dim_UF_has_entity__medida_resumo_comparativo_a_x_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_UF": {
+			          "Target": {
+			            "Entity": "dim_UF"
+			          }
+			        },
+			        "entity__medida.resumo_comparativo_a_x_b": {
+			          "Target": {
+			            "Entity": "entity__medida.resumo_comparativo_a_x_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_UF"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.resumo_comparativo_a_x_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_UFs_have_resumo_comparativo_a_x_b"
+			        }
+			      ]
+			    },
+			    "dim_setor_B_has_entity__medida_resumo_comparativo_a_x_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_B"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_B": {
+			          "Target": {
+			            "Entity": "dim_setor_B"
+			          }
+			        },
+			        "entity__medida.resumo_comparativo_a_x_b": {
+			          "Target": {
+			            "Entity": "entity__medida.resumo_comparativo_a_x_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_B"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.resumo_comparativo_a_x_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_B_have_resumo_comparativo_a_x_b"
+			        }
+			      ]
+			    },
+			    "dim_setor_A_has_entity__medida_resumo_comparativo_a_x_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_A"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_A": {
+			          "Target": {
+			            "Entity": "dim_setor_A"
+			          }
+			        },
+			        "entity__medida.resumo_comparativo_a_x_b": {
+			          "Target": {
+			            "Entity": "entity__medida.resumo_comparativo_a_x_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_A"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.resumo_comparativo_a_x_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_A_have_resumo_comparativo_a_x_b"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_entity__medida_subtitulo_grafico_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "entity__medida.subtitulo_grafico_b": {
+			          "Target": {
+			            "Entity": "entity__medida.subtitulo_grafico_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.subtitulo_grafico_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_subtitulo_grafico_b"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_entity__medida_subtitulo_grafico_a": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "entity__medida.subtitulo_grafico_a": {
+			          "Target": {
+			            "Entity": "entity__medida.subtitulo_grafico_a"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.subtitulo_grafico_a"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_subtitulo_grafico_a"
+			        }
+			      ]
+			    },
+			    "dim_setor_B_has_entity__medida_titulo_grafico_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_B"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_B": {
+			          "Target": {
+			            "Entity": "dim_setor_B"
+			          }
+			        },
+			        "entity__medida.titulo_grafico_b": {
+			          "Target": {
+			            "Entity": "entity__medida.titulo_grafico_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_B"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.titulo_grafico_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_B_have_titulo_grafico_b"
+			        }
+			      ]
+			    },
+			    "dim_setor_A_has_entity__medida_titulo_grafico_a": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_A"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_A": {
+			          "Target": {
+			            "Entity": "dim_setor_A"
+			          }
+			        },
+			        "entity__medida.titulo_grafico_a": {
+			          "Target": {
+			            "Entity": "entity__medida.titulo_grafico_a"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_A"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.titulo_grafico_a"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_A_have_titulo_grafico_a"
+			        }
+			      ]
+			    },
+			    "dim_setor_B_has_entity__medida_mostrar_em_slicer_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_B"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_B": {
+			          "Target": {
+			            "Entity": "dim_setor_B"
+			          }
+			        },
+			        "entity__medida.mostrar_em_slicer_b": {
+			          "Target": {
+			            "Entity": "entity__medida.mostrar_em_slicer_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_B"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.mostrar_em_slicer_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_B_have_mostrar_em_slicer_b"
+			        }
+			      ]
+			    },
+			    "dim_setor_A_has_entity__medida_mostrar_em_slicer_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_A"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_A": {
+			          "Target": {
+			            "Entity": "dim_setor_A"
+			          }
+			        },
+			        "entity__medida.mostrar_em_slicer_b": {
+			          "Target": {
+			            "Entity": "entity__medida.mostrar_em_slicer_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_A"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.mostrar_em_slicer_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_A_have_mostrar_em_slicer_b"
+			        }
+			      ]
+			    },
+			    "dim_setor_B_has_entity__medida_mostrar_em_slicer_a": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_B"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_B": {
+			          "Target": {
+			            "Entity": "dim_setor_B"
+			          }
+			        },
+			        "entity__medida.mostrar_em_slicer_a": {
+			          "Target": {
+			            "Entity": "entity__medida.mostrar_em_slicer_a"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_B"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.mostrar_em_slicer_a"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_B_have_mostrar_em_slicer_a"
+			        }
+			      ]
+			    },
+			    "dim_setor_A_has_entity__medida_mostrar_em_slicer_a": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor_A"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor_A": {
+			          "Target": {
+			            "Entity": "dim_setor_A"
+			          }
+			        },
+			        "entity__medida.mostrar_em_slicer_a": {
+			          "Target": {
+			            "Entity": "entity__medida.mostrar_em_slicer_a"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor_A"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.mostrar_em_slicer_a"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setor_A_have_mostrar_em_slicer_a"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_entity__medida_saldo_setor_b": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "entity__medida.saldo_setor_b": {
+			          "Target": {
+			            "Entity": "entity__medida.saldo_setor_b"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.saldo_setor_b"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_saldo_setor_b"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_entity__medida_saldo_setor_a": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "entity__medida.saldo_setor_a": {
+			          "Target": {
+			            "Entity": "entity__medida.saldo_setor_a"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.saldo_setor_a"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_saldo_setor_a"
+			        }
+			      ]
+			    },
+			    "dim_setor_has_eh_agregador": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor": {
+			          "Target": {
+			            "Entity": "dim_setor"
+			          }
+			        },
+			        "dim_setor.eh_agregador": {
+			          "Target": {
+			            "Entity": "dim_setor.eh_agregador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor"
+			            },
+			            "Object": {
+			              "Role": "dim_setor.eh_agregador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setors_have_eh_agregadors"
+			        }
+			      ]
+			    },
+			    "dim_setor_has_nivel": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor": {
+			          "Target": {
+			            "Entity": "dim_setor"
+			          }
+			        },
+			        "dim_setor.nivel": {
+			          "Target": {
+			            "Entity": "dim_setor.nivel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor"
+			            },
+			            "Object": {
+			              "Role": "dim_setor.nivel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setors_have_nivels"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_entity__medida_rotatividade_UF_vs_brasil": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "entity__medida.rotatividade_UF_vs_brasil": {
+			          "Target": {
+			            "Entity": "entity__medida.rotatividade_UF_vs_brasil"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.rotatividade_UF_vs_brasil"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_rotatividade_UF_vs_brasil"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_entity__medida_taxa_rotatividade_brasil": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "entity__medida.taxa_rotatividade_brasil": {
+			          "Target": {
+			            "Entity": "entity__medida.taxa_rotatividade_brasil"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.taxa_rotatividade_brasil"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_taxa_rotatividade_brasil"
+			        }
+			      ]
+			    },
+			    "dim_data_has_entity__medida_destaque_pandemia_fundo": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "entity__medida.destaque_pandemia_fundo": {
+			          "Target": {
+			            "Entity": "entity__medida.destaque_pandemia_fundo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.destaque_pandemia_fundo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_destaque_pandemia_fundo"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_desligamentos_nacional": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.desligamentos_nacional": {
+			          "Target": {
+			            "Entity": "entity__medida.desligamentos_nacional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.desligamentos_nacional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_desligamentos_nacional"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_estoque_nacional": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.estoque_nacional": {
+			          "Target": {
+			            "Entity": "entity__medida.estoque_nacional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.estoque_nacional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_estoque_nacional"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_admissoes_nacional": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.admissoes_nacional": {
+			          "Target": {
+			            "Entity": "entity__medida.admissoes_nacional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.admissoes_nacional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_admissoes_nacional"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medida"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.medida": {
+			          "Target": {
+			            "Entity": "entity__medida.medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_medida"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_desligamentos_nacional_contexto": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.desligamentos_nacional_contexto": {
+			          "Target": {
+			            "Entity": "entity__medida.desligamentos_nacional_contexto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.desligamentos_nacional_contexto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_desligamentos_nacional_contexto"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_admissoes_nacional_contexto": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.admissoes_nacional_contexto": {
+			          "Target": {
+			            "Entity": "entity__medida.admissoes_nacional_contexto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.admissoes_nacional_contexto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_admissoes_nacional_contexto"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_data": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "fato_serie_mensal.data": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal.data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "fato_serie_mensal.data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_data"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_saldo_nacional_contexto": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.saldo_nacional_contexto": {
+			          "Target": {
+			            "Entity": "entity__medida.saldo_nacional_contexto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.saldo_nacional_contexto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_saldo_nacional_contexto"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_estoque_nacional_contexto": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.estoque_nacional_contexto": {
+			          "Target": {
+			            "Entity": "entity__medida.estoque_nacional_contexto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.estoque_nacional_contexto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_estoque_nacional_contexto"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_saldo_nacional": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.saldo_nacional": {
+			          "Target": {
+			            "Entity": "entity__medida.saldo_nacional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.saldo_nacional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_saldo_nacional"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_nivel": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "fato_serie_mensal.nivel": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal.nivel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "fato_serie_mensal.nivel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_nivels"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_eh_agregador": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "fato_serie_mensal.eh_agregador": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal.eh_agregador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "fato_serie_mensal.eh_agregador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_eh_agregadors"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_eh_total": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "fato_serie_mensal.eh_total": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal.eh_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "fato_serie_mensal.eh_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_eh_totals"
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional_has_entity__medida_gap_salarial_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Salario_Nacional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_salario_nacional": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional"
+			          }
+			        },
+			        "entity__medida.gap_salarial_": {
+			          "Target": {
+			            "Entity": "entity__medida.gap_salarial_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_salario_nacional"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.gap_salarial_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_salario_nacionals_have_gap_salarial_"
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional_has_entity__medida_salario_medio_desligamento": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Salario_Nacional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_salario_nacional": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional"
+			          }
+			        },
+			        "entity__medida.salario_medio_desligamento": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_desligamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_salario_nacional"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_desligamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_salario_nacionals_have_salario_medio_desligamento"
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional_has_entity__medida_salario_medio_admissao": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Salario_Nacional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_salario_nacional": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional"
+			          }
+			        },
+			        "entity__medida.salario_medio_admissao": {
+			          "Target": {
+			            "Entity": "entity__medida.salario_medio_admissao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_salario_nacional"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.salario_medio_admissao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_salario_nacionals_have_salario_medio_admissao"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_entity__medida_taxa_rotatividade_UF_recalculada": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "entity__medida.taxa_rotatividade_UF_recalculada": {
+			          "Target": {
+			            "Entity": "entity__medida.taxa_rotatividade_UF_recalculada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.taxa_rotatividade_UF_recalculada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_taxa_rotatividade_UF_recalculada"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_entity__medida_taxa_rotatividade_recalculada": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "entity__medida.taxa_rotatividade_recalculada": {
+			          "Target": {
+			            "Entity": "entity__medida.taxa_rotatividade_recalculada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.taxa_rotatividade_recalculada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_taxa_rotatividade_recalculada"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_entity__medida_estoque_medio_rotatividade": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "entity__medida.estoque_medio_rotatividade": {
+			          "Target": {
+			            "Entity": "entity__medida.estoque_medio_rotatividade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.estoque_medio_rotatividade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_estoque_medio_rotatividade"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_entity__medida_desligamentos_rotatividade": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "entity__medida.desligamentos_rotatividade": {
+			          "Target": {
+			            "Entity": "entity__medida.desligamentos_rotatividade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.desligamentos_rotatividade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_desligamentos_rotatividade"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_entity__medida_admissoes_rotatividade": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "entity__medida.admissoes_rotatividade": {
+			          "Target": {
+			            "Entity": "entity__medida.admissoes_rotatividade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.admissoes_rotatividade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_admissoes_rotatividade"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_entity__medida_taxa_rotatividade_linha_única": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "entity__medida.taxa_rotatividade_linha_única": {
+			          "Target": {
+			            "Entity": "entity__medida.taxa_rotatividade_linha_única"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.taxa_rotatividade_linha_única"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_taxa_rotatividade_linha_única"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_entity__medida_saldo_UF": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "entity__medida.saldo_UF": {
+			          "Target": {
+			            "Entity": "entity__medida.saldo_UF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.saldo_UF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_saldo_UF"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_variacao__interanual_nacional": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.variacao__interanual_nacional": {
+			          "Target": {
+			            "Entity": "entity__medida.variacao__interanual_nacional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.variacao__interanual_nacional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_variacao__interanual_nacional"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_saldo_acumulado_12M": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.saldo_acumulado_12M": {
+			          "Target": {
+			            "Entity": "entity__medida.saldo_acumulado_12M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.saldo_acumulado_12M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_saldo_acumulado_12M"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_saldo": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.saldo": {
+			          "Target": {
+			            "Entity": "entity__medida.saldo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.saldo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_saldo"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_desligamento": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.desligamento": {
+			          "Target": {
+			            "Entity": "entity__medida.desligamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.desligamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_desligamento"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_admissoe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.admissoe": {
+			          "Target": {
+			            "Entity": "entity__medida.admissoe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.admissoe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_admissoe"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_entity__medida_estoque": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "entity__medida.estoque": {
+			          "Target": {
+			            "Entity": "entity__medida.estoque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.estoque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_estoque"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_nivel": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "fato_rotatividade_UF.nivel": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF.nivel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_UF.nivel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_nivels"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_taxa_rotatividade": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "fato_rotatividade_UF.taxa_rotatividade": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF.taxa_rotatividade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_UF.taxa_rotatividade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_taxa_rotatividades"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_estoque_medio": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "fato_rotatividade_UF.estoque_medio": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF.estoque_medio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_UF.estoque_medio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_estoque_medios"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_desligamento": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "fato_rotatividade_UF.desligamento": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF.desligamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_UF.desligamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_desligamentos"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_admissoe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "fato_rotatividade_UF.admissoe": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF.admissoe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_UF.admissoe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_admissoes"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_UF_has_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_UF": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF"
+			          }
+			        },
+			        "fato_rotatividade_UF.uf": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_UF.uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_UF"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_UF.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_UFs_have_ufs"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_taxa_rotatividade": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "fato_rotatividade_setor.taxa_rotatividade": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor.taxa_rotatividade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_setor.taxa_rotatividade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_taxa_rotatividades"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_estoque_medio": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "fato_rotatividade_setor.estoque_medio": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor.estoque_medio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_setor.estoque_medio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_estoque_medios"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_desligamento": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "fato_rotatividade_setor.desligamento": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor.desligamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_setor.desligamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_desligamentos"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_admissoe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "fato_rotatividade_setor.admissoe": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor.admissoe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_setor.admissoe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_admissoes"
+			        }
+			      ]
+			    },
+			    "fato_rotatividade_setor_has_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Rotatividade_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_rotatividade_setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor"
+			          }
+			        },
+			        "fato_rotatividade_setor.setor": {
+			          "Target": {
+			            "Entity": "fato_rotatividade_setor.setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_rotatividade_setor"
+			            },
+			            "Object": {
+			              "Role": "fato_rotatividade_setor.setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_rotatividade_setors_have_setors"
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional_has_salario_medio_desligamento": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Salario_Nacional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_salario_nacional": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional"
+			          }
+			        },
+			        "fato_salario_nacional.salario_medio_desligamento": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional.salario_medio_desligamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_salario_nacional"
+			            },
+			            "Object": {
+			              "Role": "fato_salario_nacional.salario_medio_desligamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_salario_nacionals_have_salario_medio_desligamentos"
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional_has_salario_medio_admissao": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Salario_Nacional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_salario_nacional": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional"
+			          }
+			        },
+			        "fato_salario_nacional.salario_medio_admissao": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional.salario_medio_admissao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_salario_nacional"
+			            },
+			            "Object": {
+			              "Role": "fato_salario_nacional.salario_medio_admissao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_salario_nacionals_have_salario_medio_admissaos"
+			        }
+			      ]
+			    },
+			    "fato_salario_nacional_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Salario_Nacional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_salario_nacional": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional"
+			          }
+			        },
+			        "fato_salario_nacional.me": {
+			          "Target": {
+			            "Entity": "fato_salario_nacional.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_salario_nacional"
+			            },
+			            "Object": {
+			              "Role": "fato_salario_nacional.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_salario_nacionals_have_me"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "fato_serie_mensal.valor": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal.valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "fato_serie_mensal.valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_valor"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_metrica": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "fato_serie_mensal.metrica": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal.metrica"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "fato_serie_mensal.metrica"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_metricas"
+			        }
+			      ]
+			    },
+			    "fato_serie_mensal_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Serie_Mensal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_serie_mensal": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal"
+			          }
+			        },
+			        "fato_serie_mensal.me": {
+			          "Target": {
+			            "Entity": "fato_serie_mensal.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_serie_mensal"
+			            },
+			            "Object": {
+			              "Role": "fato_serie_mensal.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_serie_mensal_have_me"
+			        }
+			      ]
+			    },
+			    "fato_saldo_UF_setor_has_saldo": {
+			      "Binding": {
+			        "ConceptualEntity": "Fato_Saldo_UF_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_saldo_UF_setor": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor"
+			          }
+			        },
+			        "fato_saldo_UF_setor.saldo": {
+			          "Target": {
+			            "Entity": "fato_saldo_UF_setor.saldo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_saldo_UF_setor"
+			            },
+			            "Object": {
+			              "Role": "fato_saldo_UF_setor.saldo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_saldo_UF_setors_have_saldos"
+			        }
+			      ]
+			    },
+			    "dim_data_has_mes_numero": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.mes_numero": {
+			          "Target": {
+			            "Entity": "dim_data.mes_numero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.mes_numero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_mes_numeros"
+			        }
+			      ]
+			    },
+			    "dim_data_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.ano": {
+			          "Target": {
+			            "Entity": "dim_data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_anos"
+			        }
+			      ]
+			    },
+			    "dim_data_has_data": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.data": {
+			          "Target": {
+			            "Entity": "dim_data.data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_data"
+			        }
+			      ]
+			    },
+			    "dim_data_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.me": {
+			          "Target": {
+			            "Entity": "dim_data.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_me"
+			        }
+			      ]
+			    },
+			    "dim_UF_has_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_UF": {
+			          "Target": {
+			            "Entity": "dim_UF"
+			          }
+			        },
+			        "dim_UF.uf": {
+			          "Target": {
+			            "Entity": "dim_UF.uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_UF"
+			            },
+			            "Object": {
+			              "Role": "dim_UF.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_UFs_have_ufs"
+			        }
+			      ]
+			    },
+			    "dim_setor_has_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Setor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_setor": {
+			          "Target": {
+			            "Entity": "dim_setor"
+			          }
+			        },
+			        "dim_setor.setor": {
+			          "Target": {
+			            "Entity": "dim_setor.setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_setor"
+			            },
+			            "Object": {
+			              "Role": "dim_setor.setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_setors_have_setors"
+			        }
+			      ]
+			    },
+			    "dim_data_data_mê_has_dim_data_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data.data.mê": {
+			          "Target": {
+			            "Entity": "dim_data.data.mê"
+			          }
+			        },
+			        "dim_data.data.dia": {
+			          "Target": {
+			            "Entity": "dim_data.data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.mê"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data.data.dia"
+			            },
+			            "Object": {
+			              "Role": "dim_data.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_data.data.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_data.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

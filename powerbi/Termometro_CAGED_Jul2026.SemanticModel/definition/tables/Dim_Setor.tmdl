@@ -1,0 +1,56 @@
+table Dim_Setor
+	lineageTag: 5bf577ce-57c1-4232-8644-578e2af372a3
+
+	column Setor
+		dataType: string
+		lineageTag: 5f7bdd04-6d75-4ad6-b67a-ed26f08eede4
+		summarizeBy: none
+		sourceColumn: Setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivel
+		dataType: int64
+		formatString: 0
+		lineageTag: f7662fb9-16c5-4710-9228-6a903e791e83
+		summarizeBy: sum
+		sourceColumn: Nivel
+
+		annotation SummarizationSetBy = Automatic
+
+	column EhAgregador
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d9942cfa-87c6-4a67-bcf7-59e79cab584f
+		summarizeBy: none
+		sourceColumn: EhAgregador
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Setor (Legenda)' = Dim_Setor[Setor]
+		lineageTag: 28cf206d-691c-4f60-a13e-e19b6bdf3bfa
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Setor = m
+		mode: import
+		source =
+				let
+				    Setores4 = Table.SelectColumns(stg_Tabela4, {"Setor"}),
+				    Setores6 = Table.SelectColumns(stg_Tabela6, {"Setor"}),
+				    Setores10 = Table.SelectColumns(stg_Tabela10, {"Setor"}),
+				    Combinado = Table.Combine({Setores4, Setores6, Setores10}),
+				    Limpo = Table.TransformColumns(Combinado, {{"Setor", each Text.Proper(Text.Trim(_))}}),
+				    SemTotal = Table.SelectRows(Limpo, each [Setor] <> "Total"),
+				    SemDuplicata = Table.Distinct(SemTotal),
+				    ClassificacaoSetor = Table.Distinct(Table.SelectColumns(stg_Tabela6, {"Setor", "Nivel", "EhAgregador"})),
+				    ComClassificacao = Table.NestedJoin(SemDuplicata, {"Setor"}, ClassificacaoSetor, {"Setor"}, "Classificacao", JoinKind.LeftOuter),
+				    Expandido = Table.ExpandTableColumn(ComClassificacao, "Classificacao", {"Nivel", "EhAgregador"})
+				in
+				    Expandido
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

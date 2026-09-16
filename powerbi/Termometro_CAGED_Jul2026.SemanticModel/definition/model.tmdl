@@ -1,0 +1,31 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["stg_Tabela4","stg_Tabela6","stg_Tabela9","stg_Tabela10","stg_Tabela11","Dim_Setor","Dim_UF","Dim_Data","Fato_Saldo_UF_Setor","Fato_Serie_Mensal","Fato_Salario_Nacional","Fato_Rotatividade_Setor","Fato_Rotatividade_UF","_Medida","Dim_Setor_A","Dim_Setor_B"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Dim_Setor
+ref table Dim_UF
+ref table Dim_Data
+ref table DateTableTemplate_7406aaee-16d2-451b-bbc9-951751b2aff7
+ref table LocalDateTable_b2209f3c-35af-4f09-88a1-89ac17ebf721
+ref table Fato_Saldo_UF_Setor
+ref table Fato_Serie_Mensal
+ref table Fato_Salario_Nacional
+ref table Fato_Rotatividade_Setor
+ref table Fato_Rotatividade_UF
+ref table _Medida
+ref table Dim_Setor_A
+ref table Dim_Setor_B
+
+ref cultureInfo pt-BR
+

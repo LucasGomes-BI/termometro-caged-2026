@@ -1,0 +1,87 @@
+table Fato_Serie_Mensal
+	lineageTag: cd51035d-8505-4294-be6f-d7a0f6790f79
+
+	column Setor
+		dataType: string
+		lineageTag: e3201ae2-e770-4f90-aa66-b17ddca23010
+		summarizeBy: none
+		sourceColumn: Setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: 618085c3-cd4a-4058-95f7-4b0866b6dc32
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Metrica
+		dataType: string
+		lineageTag: c15a6c45-d82f-4336-9787-33237598fb12
+		summarizeBy: none
+		sourceColumn: Metrica
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: double
+		lineageTag: 879d4d3a-ca7a-4d42-a191-c091dd7003d7
+		summarizeBy: sum
+		sourceColumn: Valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EhTotal
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9d011c22-62f6-41be-acd8-0480406f7852
+		summarizeBy: none
+		sourceColumn: EhTotal
+
+		annotation SummarizationSetBy = Automatic
+
+	column EhAgregador
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 49a1525f-e8e5-467b-947f-29047183af8f
+		summarizeBy: none
+		sourceColumn: EhAgregador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivel
+		dataType: int64
+		formatString: 0
+		lineageTag: 964152b8-2c75-4a9b-9782-108fd4f6f0be
+		summarizeBy: sum
+		sourceColumn: Nivel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ccd90792-0dcc-458e-a557-56f28e3da583
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Fato_Serie_Mensal = m
+		mode: import
+		source =
+				let
+				    Fonte = stg_Tabela6
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

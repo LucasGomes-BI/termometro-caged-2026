@@ -1,0 +1,39 @@
+relationship c7470a26-d8c4-4605-9d2f-18e347d18c08
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Data.Data
+	toColumn: LocalDateTable_b2209f3c-35af-4f09-88a1-89ac17ebf721.Date
+
+relationship AutoDetected_3375e4d4-4cdc-4361-a9df-b1b1fde3af7c
+	fromColumn: Fato_Saldo_UF_Setor.Setor
+	toColumn: Dim_Setor.Setor
+
+relationship AutoDetected_b53ebe41-f88c-4fd8-a2f7-9a9eb6253b5e
+	fromColumn: Fato_Serie_Mensal.Setor
+	toColumn: Dim_Setor.Setor
+
+relationship AutoDetected_8c7ab771-d01c-452e-aeb4-990e094a1b81
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Fato_Rotatividade_Setor.Setor
+	toColumn: Dim_Setor.Setor
+
+relationship AutoDetected_535da1e0-9ae8-4dd3-9b99-2cdc1795b7f9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Dim_UF.UF
+	toColumn: Fato_Rotatividade_UF.UF
+
+relationship AutoDetected_25b2ec10-14b4-4e15-913a-c6bf9c4509e9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Fato_Salario_Nacional.Mes
+	toColumn: Dim_Data.Mes
+
+relationship b926716a-53c2-1c32-3715-ff491037e90f
+	fromColumn: Fato_Saldo_UF_Setor.UF
+	toColumn: Dim_UF.UF
+
+relationship 5c588470-43b2-9959-90eb-b32eb9565a42
+	fromColumn: Fato_Serie_Mensal.Data
+	toColumn: Dim_Data.Data
+

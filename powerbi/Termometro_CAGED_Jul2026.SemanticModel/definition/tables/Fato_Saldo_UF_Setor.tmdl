@@ -1,0 +1,40 @@
+table Fato_Saldo_UF_Setor
+	lineageTag: 89f0174b-e26e-4cb0-962c-be371491749f
+
+	column Setor
+		dataType: string
+		lineageTag: 25e58e44-1b39-4a99-b633-d07ca64cd61f
+		summarizeBy: none
+		sourceColumn: Setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column UF
+		dataType: string
+		lineageTag: 14e3c636-4ed6-437c-a0ca-d90d98463b88
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column Saldo
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d08dd19-bac3-432b-8c52-f1822b84e480
+		summarizeBy: sum
+		sourceColumn: Saldo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fato_Saldo_UF_Setor = m
+		mode: import
+		source =
+				let
+				    Fonte = stg_Tabela4
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

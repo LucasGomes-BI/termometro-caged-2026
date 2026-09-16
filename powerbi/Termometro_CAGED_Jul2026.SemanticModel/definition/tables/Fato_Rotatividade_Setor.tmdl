@@ -1,0 +1,61 @@
+table Fato_Rotatividade_Setor
+	lineageTag: a2bd3118-1168-47d3-a5af-8503fff9335e
+
+	column Setor
+		dataType: string
+		lineageTag: 97a41a54-3744-44d5-830c-c48b25a9ce04
+		summarizeBy: none
+		sourceColumn: Setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admissoes
+		dataType: int64
+		formatString: 0
+		lineageTag: c1989404-e663-4902-b2b6-7850f0f6031f
+		summarizeBy: sum
+		sourceColumn: Admissoes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Desligamentos
+		dataType: int64
+		formatString: 0
+		lineageTag: 36a506d3-43d2-4f10-b099-c988f7be6885
+		summarizeBy: sum
+		sourceColumn: Desligamentos
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstoqueMedio
+		dataType: double
+		lineageTag: b341b020-302c-4cf1-a584-b3fd253bb692
+		summarizeBy: sum
+		sourceColumn: EstoqueMedio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxaRotatividade
+		dataType: double
+		lineageTag: b3134224-22b7-462e-89a9-584458de1f57
+		summarizeBy: sum
+		sourceColumn: TaxaRotatividade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fato_Rotatividade_Setor = m
+		mode: import
+		source =
+				let
+				    Fonte = stg_Tabela10
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,70 @@
+table Dim_Data
+	lineageTag: ebc0f719-7fbc-4add-8163-5effd80c58ca
+
+	column Mes
+		dataType: string
+		lineageTag: a32487b3-d99f-4522-b3ef-395801196bfa
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 009fe20d-6276-4ffe-aeb6-074befcd319e
+		summarizeBy: none
+		sourceColumn: Data
+
+		variation Variation
+			isDefault
+			relationship: c7470a26-d8c4-4605-9d2f-18e347d18c08
+			defaultHierarchy: LocalDateTable_b2209f3c-35af-4f09-88a1-89ac17ebf721.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 172c66b2-08ec-4454-8d3a-dba272cdf608
+		summarizeBy: sum
+		sourceColumn: Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNumero
+		dataType: int64
+		formatString: 0
+		lineageTag: 244ff733-f7d4-4f68-aa25-5243b8f39c31
+		summarizeBy: sum
+		sourceColumn: MesNumero
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Data = m
+		mode: import
+		source =
+				let
+				    MesesA = Table.SelectColumns(stg_Tabela6, {"Mes"}),
+				    MesesB = Table.SelectColumns(stg_Tabela9, {"Mes"}),
+				    Combinado = Table.Distinct(Table.Combine({MesesA, MesesB})),
+				    MesesPT = {"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"},
+				    AdicionarData = Table.AddColumn(Combinado, "Data", each
+				        let
+				            Partes = Text.Split([Mes], "/"),
+				            NumMes = List.PositionOf(MesesPT, Partes{0}) + 1,
+				            Ano = Number.From(Partes{1})
+				        in
+				            #date(Ano, NumMes, 1), type date),
+				    Ordenado = Table.Sort(AdicionarData, {{"Data", Order.Ascending}}),
+				    AddAno = Table.AddColumn(Ordenado, "Ano", each Date.Year([Data]), Int64.Type),
+				    AddMesNum = Table.AddColumn(AddAno, "MesNumero", each Date.Month([Data]), Int64.Type)
+				in
+				    AddMesNum
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

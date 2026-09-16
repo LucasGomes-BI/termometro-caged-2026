@@ -1,0 +1,144 @@
+expression stg_Tabela4 =
+		let
+		    Origem = Excel.Workbook(File.Contents("C:\Users\lucas.azevedo_scaffo\Downloads\termometro-caged-2026\data\3-tabelas_Julho de 2026.xlsx"), null, true),
+		    Navegacao = Origem{[Item="Tabela 4", Kind="Sheet"]}[Data],
+		    RemoverBrancas = Table.SelectColumns(Navegacao, List.Select(Table.ColumnNames(Navegacao), each not List.IsEmpty(List.RemoveNulls(Table.Column(Navegacao, _))))),
+		    LinhaUF = Table.ToRows(Table.FirstN(Table.Skip(RemoverBrancas, 5), 1)){0},
+		    DadosBrutos = Table.Skip(RemoverBrancas, 6),
+		    NomesAtuais = Table.ColumnNames(DadosBrutos),
+		    NovosNomes = List.Transform(List.Positions(NomesAtuais), each
+		        if _ = 0 then "Setor" else if LinhaUF{_} <> null then LinhaUF{_} else NomesAtuais{_}),
+		    Renomeado = Table.RenameColumns(DadosBrutos, List.Zip({NomesAtuais, NovosNomes})),
+		    RemoverRodape = Table.SelectRows(Renomeado, each [Setor] <> null
+		        and not Text.StartsWith(Text.Trim(Text.From([Setor])), "Fonte")
+		        and not Text.StartsWith(Text.Trim(Text.From([Setor])), "*")),
+		    RemoverTotalNaoIdent = Table.RemoveColumns(RemoverRodape, {"Total", "Não identificado"}),
+		    Unpivot = Table.UnpivotOtherColumns(RemoverTotalNaoIdent, {"Setor"}, "UF", "Saldo"),
+		    TipoAlterado = Table.TransformColumnTypes(Unpivot, {{"Saldo", Int64.Type}})
+		in
+		    TipoAlterado
+	lineageTag: 01262a91-b84f-451e-957e-9ada7c9cc2d7
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression stg_Tabela6 =
+		let
+		    Origem = Excel.Workbook(File.Contents("C:\Users\lucas.azevedo_scaffo\Downloads\termometro-caged-2026\data\3-tabelas_Julho de 2026.xlsx"), null, true),
+		    Navegacao = Origem{[Item="Tabela 6", Kind="Sheet"]}[Data],
+		    RemoverBrancas = Table.SelectColumns(Navegacao, List.Select(Table.ColumnNames(Navegacao), each not List.IsEmpty(List.RemoveNulls(Table.Column(Navegacao, _))))),
+		    NomesColunas = Table.ColumnNames(RemoverBrancas),
+		    LinhaMeses = Table.ToRows(Table.FirstN(Table.Skip(RemoverBrancas, 4), 1)){0},
+		    LinhaMetricas = Table.ToRows(Table.FirstN(Table.Skip(RemoverBrancas, 5), 1)){0},
+		    MesesPreenchidos = List.Accumulate(LinhaMeses, {}, (estado, atual) =>
+		        estado & { if atual <> null then atual else List.Last(estado, null) }),
+		    TabelaMapeamento = Table.FromColumns({NomesColunas, MesesPreenchidos, LinhaMetricas}, {"Coluna", "Mes", "Metrica"}),
+		    MapeamentoValido = Table.SelectRows(TabelaMapeamento, each [Metrica] <> null and [Mes] <> null
+		        and not Text.Contains([Mes], "Acumulado") and not Text.Contains([Mes], "Últimos")),
+		    DadosBrutos = Table.Skip(RemoverBrancas, 6),
+		    RenomeadoSetor = Table.RenameColumns(DadosBrutos, {{NomesColunas{0}, "Setor"}}),
+		    SetorPadronizado = Table.TransformColumns(RenomeadoSetor, {{"Setor", Text.Proper}}),
+		    Unpivot = Table.UnpivotOtherColumns(SetorPadronizado, {"Setor"}, "Coluna", "Valor"),
+		    RemoverRodape = Table.SelectRows(Unpivot, each [Setor] <> null
+		        and not Text.StartsWith(Text.Trim(Text.From([Setor])), "Fonte")
+		        and not Text.StartsWith(Text.Trim(Text.From([Setor])), "*")),
+		    Mesclado = Table.NestedJoin(RemoverRodape, {"Coluna"}, MapeamentoValido, {"Coluna"}, "Mapa", JoinKind.Inner),
+		    Expandido = Table.ExpandTableColumn(Mesclado, "Mapa", {"Mes", "Metrica"}),
+		    ComValor = Table.SelectColumns(Expandido, {"Setor", "Mes", "Metrica", "Valor"}),
+		    TipoAlterado = Table.TransformColumnTypes(ComValor, {{"Valor", type number}}),
+		    Agregadores = {
+		        "Indústria Geral",
+		        "Serviços",
+		        "Informação, Comunicação E Atividades Financeiras, Imobiliárias, Profissionais E Administrativas",
+		        "Administração Pública, Defesa E Seguridade Social, Educação, Saúde Humana E Serviços Sociais",
+		        "Outros Serviços"
+		    },
+		    AddEhTotal = Table.AddColumn(TipoAlterado, "EhTotal", each [Setor] = "Total", type logical),
+		    AddEhAgregador = Table.AddColumn(AddEhTotal, "EhAgregador", each List.Contains(Agregadores, [Setor]), type logical),
+		    AddNivel = Table.AddColumn(AddEhAgregador, "Nivel", each
+		        if [EhTotal] then 0
+		        else if List.Contains({"Agricultura, Pecuária, Produção Florestal, Pesca E Aquicultura", "Indústria Geral", "Construção", "Comércio; Reparação De Veículos Automotores E Motocicletas", "Serviços", "Não Identificado***"}, [Setor]) then 1
+		        else if List.Contains({"Transporte, Armazenagem E Correio", "Alojamento E Alimentação", "Informação, Comunicação E Atividades Financeiras, Imobiliárias, Profissionais E Administrativas", "Administração Pública, Defesa E Seguridade Social, Educação, Saúde Humana E Serviços Sociais", "Serviços Domésticos", "Outros Serviços"}, [Setor]) then 2
+		        else 3, Int64.Type),
+		    MesesPT = {"Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"},
+		    AddData = Table.AddColumn(AddNivel, "Data", each
+		        let
+		            Partes = Text.Split([Mes], "/"),
+		            NumMes = List.PositionOf(MesesPT, Partes{0}) + 1,
+		            Ano = Number.From(Partes{1})
+		        in
+		            #date(Ano, NumMes, 1), type date)
+		in
+		    AddData
+	lineageTag: 9d51ff3d-fc2d-4305-a7d6-532c5118cc17
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression stg_Tabela9 =
+		let
+		    Origem = Excel.Workbook(File.Contents("C:\Users\lucas.azevedo_scaffo\Downloads\termometro-caged-2026\data\3-tabelas_Julho de 2026.xlsx"), null, true),
+		    Navegacao = Origem{[Item="Tabela 9", Kind="Sheet"]}[Data],
+		    RemoverBrancas = Table.SelectColumns(Navegacao, List.Select(Table.ColumnNames(Navegacao), each not List.IsEmpty(List.RemoveNulls(Table.Column(Navegacao, _))))),
+		    ColunasUteis = Table.SelectColumns(RemoverBrancas, {"Column2", "Column3", "Column4"}),
+		    DadosBrutos = Table.Skip(ColunasUteis, 5),
+		    Renomeado = Table.RenameColumns(DadosBrutos, {
+		        {"Column2", "Mes"}, {"Column3", "SalarioMedioAdmissao"}, {"Column4", "SalarioMedioDesligamento"}
+		    }),
+		    RemoverRodape = Table.SelectRows(Renomeado, each [Mes] <> null and Text.Contains(Text.From([Mes]), "/")),
+		    TipoAlterado = Table.TransformColumnTypes(RemoverRodape, {{"SalarioMedioAdmissao", type number}, {"SalarioMedioDesligamento", type number}})
+		in
+		    TipoAlterado
+	lineageTag: 545da960-b6b5-4ce3-a02d-beabe09a7d11
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression stg_Tabela10 =
+		let
+		    Origem = Excel.Workbook(File.Contents("C:\Users\lucas.azevedo_scaffo\Downloads\termometro-caged-2026\data\3-tabelas_Julho de 2026.xlsx"), null, true),
+		    Navegacao = Origem{[Item="Tabela 10", Kind="Sheet"]}[Data],
+		    RemoverBrancas = Table.SelectColumns(Navegacao, List.Select(Table.ColumnNames(Navegacao), each not List.IsEmpty(List.RemoveNulls(Table.Column(Navegacao, _))))),
+		    DadosBrutos = Table.Skip(RemoverBrancas, 6),
+		    NomesAtuais = Table.ColumnNames(DadosBrutos),
+		    Renomeado = Table.RenameColumns(DadosBrutos, {
+		        {NomesAtuais{0}, "Setor"}, {NomesAtuais{1}, "Admissoes"}, {NomesAtuais{2}, "Desligamentos"},
+		        {NomesAtuais{3}, "EstoqueMedio"}, {NomesAtuais{4}, "TaxaRotatividade"}
+		    }),
+		    RemoverRodape = Table.SelectRows(Renomeado, each [Setor] <> null
+		        and not Text.StartsWith(Text.Trim(Text.From([Setor])), "Fonte")
+		        and not Text.StartsWith(Text.Trim(Text.From([Setor])), "Metodologia")
+		        and not Text.StartsWith(Text.Trim(Text.From([Setor])), "*")),
+		    TipoAlterado = Table.TransformColumnTypes(RemoverRodape, {{"Admissoes", Int64.Type}, {"Desligamentos", Int64.Type}, {"EstoqueMedio", type number}, {"TaxaRotatividade", type number}})
+		in
+		    TipoAlterado
+	lineageTag: 6a19d2d2-5796-4a39-b762-102b5555801e
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression stg_Tabela11 =
+		let
+		    Origem = Excel.Workbook(File.Contents("C:\Users\lucas.azevedo_scaffo\Downloads\termometro-caged-2026\data\3-tabelas_Julho de 2026.xlsx"), null, true),
+		    Navegacao = Origem{[Item="Tabela 11", Kind="Sheet"]}[Data],
+		    RemoverBrancas = Table.SelectColumns(Navegacao, List.Select(Table.ColumnNames(Navegacao), each not List.IsEmpty(List.RemoveNulls(Table.Column(Navegacao, _))))),
+		    DadosBrutos = Table.Skip(RemoverBrancas, 6),
+		    NomesAtuais = Table.ColumnNames(DadosBrutos),
+		    Renomeado = Table.RenameColumns(DadosBrutos, {
+		        {NomesAtuais{0}, "UF"}, {NomesAtuais{1}, "Admissoes"}, {NomesAtuais{2}, "Desligamentos"},
+		        {NomesAtuais{3}, "EstoqueMedio"}, {NomesAtuais{4}, "TaxaRotatividade"}
+		    }),
+		    RemoverRodape = Table.SelectRows(Renomeado, each [UF] <> null and not Text.StartsWith(Text.Trim(Text.From([UF])), "Fonte")),
+		    TipoAlterado = Table.TransformColumnTypes(RemoverRodape, {{"Admissoes", Int64.Type}, {"Desligamentos", Int64.Type}, {"EstoqueMedio", type number}, {"TaxaRotatividade", type number}})
+		in
+		    TipoAlterado
+	lineageTag: 9a1d9b2e-77d6-44de-ab24-eda8698085da
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

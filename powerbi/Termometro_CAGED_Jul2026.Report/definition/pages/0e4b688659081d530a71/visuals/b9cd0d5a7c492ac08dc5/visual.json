@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "b9cd0d5a7c492ac08dc5",
+  "position": {
+    "x": 0,
+    "y": 12,
+    "z": 1000,
+    "height": 62,
+    "width": 960,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Termômetro do Mercado de Trabalho Formal — CAGED",
+                    "textStyle": {
+                      "fontFamily": "IBM Plex Sans, Segoe UI, Arial, sans-serif",
+                      "fontSize": "28pt",
+                      "color": "#ffffff"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "e303b5f9523e70083e5b"
+}
