@@ -28,4 +28,9 @@ Estrela clássica: 3 dimensões (`Dim_Setor`, `Dim_UF`, `Dim_Data`) mais 5 fatos
 Detalhes de granularidade, tratamento de hierarquia de setor e decisões de design de cada medida estão em `docs/dicionario_dados.md` e `docs/decisoes_modelagem.md`.
 
 ## Como abrir
-Power BI Desktop, abrir `powerbi/*.pbip` (requer preview "Power BI Project save option" habilitado em Options > Preview features).
+Duas opções dentro de `powerbi/`, ambas com o mesmo conteúdo:
+
+- **`Termometro_CAGED_Jul2026.pbip`** (recomendado): abre com o código-fonte completo (Power Query e DAX) versionado em texto dentro das pastas `.Report` e `.SemanticModel`. Requer baixar o repositório inteiro (não arquivos soltos) e ter o preview "Power BI Project save option" habilitado em Options > Preview features no Power BI Desktop.
+- **`Termometro_CAGED_Jul2026.pbix`**: arquivo único tradicional, basta baixar e abrir direto, sem configuração prévia.
+
+Em ambos os casos, o caminho do arquivo Excel de origem está fixo na máquina onde o projeto foi criado. Se abrir em outro computador, corrija o caminho em Editor Power Query > Configurações da Fonte de Dados antes de atualizar os dados.
